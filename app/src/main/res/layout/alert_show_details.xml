@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_round"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:stretchColumns="1"
+    android:padding="16dp" >
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:layout_span="3"
+            android:padding="5dp"
+            android:textColor="@color/colorBlue"
+            android:text="@string/details_lap_text" />
+    </TableRow>
+    <TableRow
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/lap_change_color"
+            android:layout_column="0"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/iconLap"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/lap"
+            android:contentDescription="@string/lap"
+            android:textColor="?android:attr/colorBackgroundFloating" />
+        <TextView
+            android:id="@+id/numLap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/lap_statistics"
+            android:textColor="?android:attr/colorBackgroundFloating" />
+    </TableRow>
+    <TableRow
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/run_change_color"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_column="0"
+            android:contentDescription="@string/iconBestLap"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/best_lap"
+            android:contentDescription="@string/best_lap"
+            android:textColor="?android:attr/colorBackgroundFloating" />
+        <TextView
+            android:id="@+id/bestLapTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/bestLapNum"
+            android:layout_column="2"
+            android:textColor="?android:attr/colorBackgroundFloating" />
+    </TableRow>
+    <TableRow
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/walk_change_color"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_column="0"
+            android:contentDescription="@string/iconWorseLap"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/worse_lap"
+            android:contentDescription="@string/worse_lap"
+            android:textColor="?android:attr/colorBackgroundFloating" />
+        <TextView
+            android:id="@+id/worseLapTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/worseLapNum"
+            android:textColor="?android:attr/colorBackgroundFloating" />
+    </TableRow>
+    <TableRow
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/chart_change_color"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_column="0"
+            android:contentDescription="@string/iconAverage"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/media_lap"
+            android:contentDescription="@string/media_lap"
+            android:textColor="?android:attr/colorBackgroundFloating" />
+        <TextView
+            android:id="@+id/mediaLapTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/averageNum"
+            android:textColor="?android:attr/colorBackgroundFloating" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:text="@string/text_button_cancel"
+            android:contentDescription="@string/text_button_cancel"
+            android:textColor="@color/colorBlue"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:foreground="@drawable/border_btn_alert"
+            android:background="?android:attr/selectableItemBackground"
+            />
+    </TableRow>
+
+</TableLayout>

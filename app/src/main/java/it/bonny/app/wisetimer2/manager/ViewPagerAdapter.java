@@ -1,0 +1,31 @@
+package it.bonny.app.wisetimer2.manager;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.Lifecycle;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import it.bonny.app.wisetimer2.manager.ui.stopwatch.StopwatchFragment;
+import it.bonny.app.wisetimer2.manager.ui.timer.TimerFragment;
+
+public class ViewPagerAdapter extends FragmentStateAdapter {
+
+    public ViewPagerAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+        super(fragmentManager, lifecycle);
+    }
+
+    @NonNull
+    @Override
+    public Fragment createFragment(int position) {
+        if(position == 1) {
+            return new StopwatchFragment();
+        }
+        return new TimerFragment();
+    }
+
+    @Override
+    public int getItemCount() {
+        return 2;
+    }
+}

@@ -1,23 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="it.bonny.app.wisetimer2">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+        </intent>
+    </queries>
+
     <application
+        android:name="it.bonny.app.wisetimer2.notification.App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/icon_wisetimer"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.WiseTimer2">
+        android:roundIcon="@mipmap/icon_wisetimer_round"
+        android:supportsRtl="true">
+        <meta-data android:name="firebase_crashlytics_collection_enabled" android:value="false" />
+        <meta-data android:name="firebase_analytics_collection_enabled" android:value="false" />
+        <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false" />
+        <meta-data android:name="google_analytics_ssaid_collection_enabled" android:value="false" />
+        <meta-data android:name="google_analytics_default_allow_ad_personalization_signals" android:value="false" />
+        <meta-data android:name="firebase_messaging_auto_init_enabled" android:value="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="it.bonny.app.wisetimer2.manager.SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <meta-data android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
         </activity>
+        <activity
+            android:name="it.bonny.app.wisetimer2.manager.ListTimer"
+            android:parentActivityName="it.bonny.app.wisetimer2.manager.MainActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity,NonResizeableActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="it.bonny.app.wisetimer2.manager.MainActivity" />
+        </activity>
+        <activity
+            android:name="it.bonny.app.wisetimer2.manager.SettingsActivity"
+            android:parentActivityName="it.bonny.app.wisetimer2.manager.MainActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity,NonResizeableActivity"
+            android:theme="@style/settingsPageDark">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="it.bonny.app.wisetimer2.manager.MainActivity" />
+        </activity>
+        <activity
+            android:name="it.bonny.app.wisetimer2.manager.InformationActivity"
+            android:parentActivityName="it.bonny.app.wisetimer2.manager.MainActivity"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/settingsPageDark"
+            tools:ignore="LockedOrientationActivity,NonResizeableActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="it.bonny.app.wisetimer2.manager.MainActivity" />
+        </activity>
+        <activity
+            android:name="it.bonny.app.wisetimer2.manager.TimerActivity"
+            android:label="@string/app_name"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity,NonResizeableActivity" />
+        <activity
+            android:name="it.bonny.app.wisetimer2.manager.MainActivity"
+            android:label="@string/app_name"
+            android:resizeableActivity="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:ignore="LockedOrientationActivity,NonResizeableActivity">
+        </activity>
+
+        <receiver android:name="it.bonny.app.wisetimer2.notification.NotificationReceiver" />
+
+        <receiver android:name="it.bonny.app.wisetimer2.manager.WidgetStopwatch"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_stopwatch_info" />
+        </receiver>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+        <!-- Firebase Notifications -->
+        <service
+            android:name="it.bonny.app.wisetimer2.notification.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_icon_wisetimer_notify" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorBlue" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/notification_channel_id" />
     </application>
 
 </manifest>

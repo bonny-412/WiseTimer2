@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_round"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp" >
+    <TextView
+        android:id="@+id/titleAlert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:padding="5dp"
+        android:textColor="@color/colorBlue"
+        />
+<EditText
+    android:id="@+id/editTextDialogUserInput"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxLength="20"
+    android:autofillHints="@string/alert_save_data_nome"
+    android:hint="@string/alert_save_data_nome"
+    android:inputType="textCapWords"
+    android:layout_marginTop="60dp"
+    >
+    <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/countText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorInfoVersion"
+        android:layout_marginEnd="5dp"
+        android:contentDescription="@string/count_characters"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/editTextDialogUserInput" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/boxInfoSaveTimer"
+        android:layout_below="@id/countText"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alert_icon"
+            android:contentDescription="@string/alert"
+            android:id="@+id/iconAlertSaveTimer"
+            />
+        <TextView
+            android:id="@+id/infoTextSaveTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/iconAlertSaveTimer"
+            android:textColor="@color/colorYellow"
+            />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonSaveDataCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/buttonSaveData"
+        android:text="@string/text_button_cancel"
+        android:contentDescription="@string/text_button_cancel"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorBlue"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:foreground="@drawable/border_btn_alert"
+        android:background="?android:attr/selectableItemBackground"
+        />
+
+    <Button
+        android:id="@+id/buttonSaveData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boxInfoSaveTimer"
+        android:text="@string/text_button_save"
+        android:contentDescription="@string/text_button_save"
+        android:layout_toStartOf="@+id/buttonSaveDataCancel"
+        android:textColor="@color/colorBlue"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:foreground="@drawable/border_btn_alert"
+        android:background="?android:attr/selectableItemBackground"
+        />
+
+
+
+</RelativeLayout>

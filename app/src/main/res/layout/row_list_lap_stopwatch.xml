@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layoutLap"
+        tools:ignore="UseCompoundDrawables">
+        <TextView
+            android:id="@+id/lap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:textSize="20sp"
+            android:textColor="#4d4d4d"
+            />
+        <ImageView
+            android:id="@+id/resultLapIcon"
+            android:contentDescription="@string/app_name"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/timePassed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:textSize="15sp"
+            android:layout_below="@+id/layoutLap"
+            />
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#4d4d4d"
+        android:textStyle="bold"
+        android:gravity="end"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:layout_alignTop="@+id/layoutLap"
+        android:layout_toEndOf="@+id/layoutLap"
+        android:layout_alignParentEnd="true"
+        />
+
+</RelativeLayout>

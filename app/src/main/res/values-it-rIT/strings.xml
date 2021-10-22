@@ -1,0 +1,253 @@
+<resources>
+    <!--  *** INFO APP *** -->
+    <string name="app_name">WiseTimer</string>
+    <string name="app_name_icon">Icona WiseTimer</string>
+    <string name="logo_ab">Bonaiuti Andrea Logo</string>
+    <string name="version">Versione 1.1.2</string>
+
+    <!-- *** TIMER *** -->
+    <string name="series">Serie</string>
+    <string name="seriesToTimerActivity">Serie:</string>
+    <string name="roundsToTimerActivity">Round:</string>
+    <string name="work">Allenamento</string>
+    <string name="second_start_rest_round">Sec rec giri</string>
+    <string name="minute_start_rest_round">Min rec giri</string>
+    <string name="minute_start_work">Min work</string>
+    <string name="second_start_work">Sec work</string>
+    <string name="second_start_rest">Sec rec</string>
+    <string name="minute_start_rest">Min rec</string>
+    <string name="numSeries">Num serie</string>
+    <string name="numRounds">Num giri</string>
+    <string name="rest">Riposo</string>
+    <string name="restRounds">Riposo Round</string>
+    <string name="rounds">Round</string>
+    <string name="duePunti">:</string>
+    <string name="timeWork">Tempo allenamento</string>
+    <string name="timeRest">Tempo recupero</string>
+    <string name="timeRestRounds">Tempo recupero giro</string>
+    <string name="preWork">Preparati</string>
+    <string name="preWorkInfoOn">(Attivato)</string>
+    <string name="preWorkInfoOff">(Disattivato)</string>
+    <string name="title_info_lap">Informazione</string>
+    <string name="text_info_lap">Permette di attivare i 5 secondi per prepararti prima del \"allenamento\"/\"riposo\"</string>
+    <string name="alert_save_data_nome">Nome timer</string>
+    <string name="alert_save_data_title">Salva timer</string>
+    <string name="alert_edit_save_data_title">Modifica timer</string>
+    <string name="count_characters">Conta caratteri</string>
+    <string name="text_button_save">Salva</string>
+    <string name="text_button_cancel">Annulla</string>
+    <string name="alert_delete_list_timer_title">Elimina</string>
+    <string name="alert_delete_list_timer_message">Sicuro di voler eliminare questo timer?</string>
+    <string name="alert_delete_list_timer_message_yes">Timer eliminato con successo</string>
+    <string name="alert_delete_list_timer_message_error">Si è verificato un errore durante la cancellazione. Riprovare più tardi</string>
+    <string name="alert_save_timer_field_required">Per salvare è necessario inserire un nome</string>
+    <string name="alert_save_timer_field_ok">Salvataggio avvenuto con successo</string>
+    <string name="alert_save_timer_field_ko">Errore durante il salvataggio.</string>
+    <string name="seconds_work_rest_0">\'Allenamento\' e/o \'Riposo\' devono essere almeno di 1 secondo</string>
+    <string name="already_existing_name">Nome già esistente</string>
+    <string name="start_work">Inizio allenamento</string>
+    <string name="fine_work">Fine allenamento</string>
+    <string name="start_rest">Inizio recupero</string>
+    <string name="fine_rest">Fine recupero</string>
+    <string name="start_rest_round">Inizio recupero round</string>
+    <string name="fine_rest_round">Fine recupero round</string>
+    <string name="play_timer_info">Avvia il timer</string>
+    <string name="play_pause_timer_info">Avvia / ferma il timer</string>
+    <string name="restart_timer_info">Resetta il timer</string>
+    <string name="timerUsedName">Nome del timer utilizzato</string>
+    <string name="timerUsedNameCustomized">Personalizzato</string>
+    <string name="saveTimer">Salva il timer</string>
+    <string name="listTimer">Lista timer salvati</string>
+    <string name="end_timer">Timer concluso</string>
+    <string name="info_timer">Tempi di lavoro</string>
+    <string name="total_info_alert_timer">Totale:</string>
+    <string name="total_info_alert_timer_ic">Totale</string>
+    <string name="interval_info_alert_timer">Intervallo</string>
+    <string name="intervals_info_alert_timer">Intervalli</string>
+    <string name="preWork_info_alert_timer">Pre allenamento:</string>
+    <string name="preWork_info_alert_timer_ic">Pre allenamento</string>
+    <string name="work_info_alert_timer">Allenamento:</string>
+    <string name="work_info_alert_timer_ic">Workout</string>
+    <string name="rest_info_alert_timer">Riposo:</string>
+    <string name="rest_info_alert_timer_ic">Riposo</string>
+    <string name="rest_rounds_info_alert_timer">Riposo round:</string>
+    <string name="rest_rounds_info_alert_timer_ic">Riposo round</string>
+    <string name="num_rounds_info_alert_timer">Numero di giri:</string>
+    <string name="num_rounds_info_alert_timer_ic">Numero di giri</string>
+
+    <!-- *** STOPWATCH *** -->
+    <string name="start_time_stopwatch">00:00.000</string>
+    <string name="lap">Giri:</string>
+    <string name="lap_statistics">Numero giri:</string>
+    <string name="best_lap">Giro migliore:</string>
+    <string name="worse_lap">Giro peggiore:</string>
+    <string name="media_lap">Media:</string>
+    <string name="details_lap_text">Statistiche</string>
+    <string name="play_pause_info">Avvia / ferma il cronometro</string>
+    <string name="show_details_lap">Guarda statistiche</string>
+    <string name="restart_info">Resetta il cronometro</string>
+    <string name="lap_info">Crea un nuovo giro</string>
+    <string name="share_laps">Condividi i giri con altre persone</string>
+    <string name="date_lap_text">Data:</string>
+    <string name="hello_lap_text">Ciao,</string>
+    <string name="numLap_lap_text">questo è il mio giro:</string>
+    <string name="numsLap_lap_text">questi sono i miei giri:</string>
+    <string name="lap_lap_text">Giro</string>
+    <string name="time_lap_text">Tempo</string>
+    <string name="time_passed_lap">Trascorsi</string>
+    <string name="worse">Peggiore</string>
+    <string name="best">Migliore</string>
+    <string name="lap_name">Giro</string>
+    <string name="stopwatch_running">Cronometro in esecuzione</string>
+
+    <!-- *** SETTINGS *** -->
+    <string name="action_settings">Impostazioni</string>
+    <!-- Messages Preferences -->
+    <string name="on">Attivato</string>
+    <string name="button_sades_fn_work">Questa impostazione è valida solo all\'interno dell\'app</string>
+    <string name="off">Disattivato</string>
+    <string name="sound_title">Suoni</string>
+    <string name="voice_title">Voce</string>
+    <string name="theme">Tema</string>
+    <string name="vibration_title">Vibrazione</string>
+    <string name="languages_title">Lingua</string>
+    <string name="mode_style_title">Stile</string>
+    <string name="display_on_title">Display sempre attivo</string>
+    <string name="side_buttons_title">Utilizzare pulsanti laterali</string>
+    <string name="comment_app">Commenta l\' applicazione</string>
+    <string name="comment_app_1">La tua opinione è molto importante</string>
+    <string name="other_app">Scopri altre app</string>
+    <string name="other_app_1">Guarda le altre app che ho realizzato</string>
+    <string name="active_crash_title">Segnalazioni anonime di bug e crash</string>
+    <string name="active_analytics_title">Rapporti anonimi sull\' utilizzo</string>
+    <string name="active_crash_subtitle">Invia automaticamente segnalazioni in caso di problemi per aiutare a risolverli</string>
+    <string name="active_analytics_subtitle">Invia dati anonimi e aggregati usati per analizzare l\' utilizzo dell\' app, così da poter capire come migliorarla</string>
+    <!--Dialog -->
+    <string name="languages_dialog_title">Scegli una lingua</string>
+    <string name="mode_style_dialog_title">Scegli uno stile</string>
+    <!-- Preference Titles -->
+    <string name="settings_header">Generali</string>
+    <string name="feedback_header">Feedback</string>
+    <string name="feedback_help_app">Aiuta a migliorare l\'app</string>
+    <string name="delete_header">Elimina</string>
+    <!-- Preference id -->
+    <string name="id_voice">voice</string>
+    <string name="id_sound">sound</string>
+    <string name="id_vibration">vibration</string>
+    <string name="id_languages">languages</string>
+    <string name="id_mode_style">modeStyle</string>
+    <string name="id_delete">delete</string>
+    <string name="id_display_on">displayOn</string>
+    <string name="id_side_buttons">side_buttons</string>
+    <string name="id_infoPreWork">infoPreWork</string>
+    <string name="id_showAlertSadeButtons">showAlertSadeButtons</string>
+    <string name="id_message_me">messageMe</string>
+    <string name="id_comment_app">commentApp</string>
+    <string name="id_other_app">otherApp</string>
+    <string name="id_active_crash">activeCrash</string>
+    <string name="id_active_analytics">activeAnalytics</string>
+    <string name="id_active_messaging">activeMessaging</string>
+    <string name="mode_light">Chiaro</string>
+    <string name="mode_dark">Scuro</string>
+    <string name="info_alert_sade_buttons_title">Ricorda!</string>
+    <string name="info_alert_sade_buttons_timer">Per il timer:\n\n- Il bottone per alzare il volume ti permetterà di avviare/fermare il tempo.\n\n- Il bottone per abbassare il volume ti permetterà di interrompere il timer.\n</string>
+    <string name="info_alert_sade_buttons_stopwatch">Per il cronometro:\n\n- Il bottone per alzare il volume ti permetterà di avviare/fermare il tempo.\n\n- Il bottone per abbassare il volume ti permetterà di salvare un giro.\n</string>
+    <string name="info_alert_sade_buttons_disable">Non mostrare più questo messaggio: </string>
+    <string name="alert_delete_title">Resetta impostazioni</string>
+    <string name="alert_delete_message">Sicuro di voler resettare le impostazioni?</string>
+    <string name="alert_delete_message_yes">Le impostazioni sono state resettate con successo</string>
+    <string name="message_me_title">Contattare lo sviluppatore</string>
+    <string name="message_me_text">Vi prego di contattarmi per eventuali problemi, bug o richiesti generali.\n Grazie.</string>
+    <string name="languages_ita">Italiano</string>
+    <string name="languages_ing">Inglese</string>
+
+    <!-- *** INFORMATION *** -->
+    <string name="action_information">Informazioni</string>
+    <string name="privacy_policy">Informativa sulla privacy</string>
+    <string name="terms_service">Termini di servizio</string>
+
+    <!-- *** ALERT GENERIC *** -->
+    <string name="yes">Si</string>
+    <string name="no">No</string>
+    <string name="close">Chiudi</string>
+    <string name="alert">Attenzione!</string>
+
+    <!-- *** BUTTON NAVIGATION BAR *** -->
+    <string name="timer_name">Timer</string>
+    <string name="stopwatch_name">Cronometro</string>
+
+    <!-- *** SEND ERROR/EMAIL *** -->
+    <string name="error_report_title">Segnala errore</string>
+    <string name="error_report_text">Ooops! Si è verificato un errore. \n \n Vuoi segnalare questo errore?</string>
+    <string name="send_email">Invia email</string>
+    <string name="send_email_error">Si è verificato un errore durante l\'invio del messaggio</string>
+    <string name="send">Invia</string>
+    <string name="email_text_required">Testo email vuoto</string>
+    <string name="email_text_placeholder">Testo email</string>
+
+    <!-- *** TUTORIAL LIST TIMER *** -->
+    <string name="title_info_page_edit">Tutorial</string>
+    <string name="text_checkbox_info_page_edit">Utilizzado la checkbox (a sinistra di ogni singola riga) è possibile scegliere il timer da utilizzare.</string>
+    <string name="text_button_info_page_edit_1">Spostando da destra verso sinistra una riga è possibile attivare due bottoni.</string>
+    <string name="text_button_info_page_edit_2">Premendo sulla \'penna\'</string>
+    <string name="text_button_info_page_edit_3">è possibile modificare il nome del timer. </string>
+    <string name="text_button_info_page_edit_4">Premendo sul \'cestino\'</string>
+    <string name="text_button_info_page_edit_5"> è possibile eliminare il timer.</string>
+    <string name="button_next_info_page_edit">Prossimo</string>
+    <string name="back">Indietro</string>
+    <string name="listTimerName">Lista timer salvati</string>
+    <string name="list_empty">Nessun dato salvato</string>
+
+    <!-- *** NOTIFICATIONS *** -->
+    <string name="descriptionPause">Pause</string>
+    <string name="descriptionStop">Stop</string>
+    <string name="notification_channel_id">channel_1</string>
+
+    <!-- *** ALERT GENERIC *** -->
+    <string name="disable_screen">Blocca tutti gli elementi cliccabili</string>
+    <string name="pressToExit">Premere di nuovo indietro per uscire</string>
+    <string name="error_textToSpeech">Errore di riproduzione del testo.</string>
+
+    <!-- *** ALERT WELCOME IN APP *** -->
+    <string name="welcome_app_title">Ciao da WiseTimer!</string>
+    <string name="welcome_app_text">Benvenuto in WiseTimer! WiseTimer è sia un timer che un cronometro.</string>
+
+    <string name="toast_message">Toast message</string>
+    <string name="block_element">Blocca elementi</string>
+    <string name="start">Avvia</string>
+    <string name="shares">Condividi</string>
+    <string name="reset">Reset</string>
+    <string name="start_stop">Avvia/Pausa</string>
+    <string name="end">Fine</string>
+    <string name="yes_no">Si/No</string>
+    <string name="removeRounds">Rimuovi giri</string>
+    <string name="addRounds">Aggiungi giri</string>
+
+    <string name="removeRestRounds">Rimuovi recupero giri</string>
+    <string name="addRestRounds">Aggiungi recupero giri</string>
+
+    <string name="removeSeries">Rimuovi serie</string>
+    <string name="addSeries">Aggiungi serie</string>
+
+    <string name="removeWork">Rimuovi allenamento</string>
+    <string name="addWork">Aggiungi allenamento</string>
+
+    <string name="removeRest">Rimuovi riposo</string>
+    <string name="addRest">Aggiungi riposo</string>
+    <string name="info">Informazioni</string>
+    <string name="show_list_timer">Mostra lista timer salvati</string>
+    <string name="other_function">Altre funzioni</string>
+    <string name="bestLapNum">Numero miglior giro</string>
+    <string name="worseLapNum">Numero peggior giro</string>
+    <string name="averageNum">Numero media</string>
+    <string name="numStopwatch">Stopwatch time</string>
+    <string name="numStopwatchLap">Lap time stopwatch</string>
+    <string name="iconAverage">Icona media</string>
+    <string name="iconWorseLap">Icona peggior giro</string>
+    <string name="iconBestLap">Icona mgilior giro</string>
+    <string name="iconLap">Icona giro</string>
+    <string name="zero">00</string>
+    <string name="uno">1</string>
+
+
+</resources>

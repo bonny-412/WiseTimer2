@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_round"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:stretchColumns="1"
+    android:padding="20dp" >
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:padding="5dp"
+        android:textColor="@color/colorBlue"
+        android:text="@string/alert_delete_list_timer_title" />
+    <TextView
+        android:id="@+id/infoTextCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/textView"
+        android:text="@string/alert_delete_list_timer_message"
+        android:textColor="?android:attr/colorBackgroundFloating"
+        />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoTextCheckbox"
+        android:layout_alignParentEnd="true"
+        android:text="@string/no"
+        android:contentDescription="@string/no"
+        android:textColor="@color/colorBlue"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:foreground="@drawable/border_btn_alert"
+        android:background="?android:attr/selectableItemBackground"
+        />
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoTextCheckbox"
+        android:layout_toStartOf="@+id/buttonCancel"
+        android:text="@string/yes"
+        android:contentDescription="@string/yes"
+        android:textColor="@color/colorBlue"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:foreground="@drawable/border_btn_alert"
+        android:background="?android:attr/selectableItemBackground"
+        />
+</RelativeLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp"
+        >
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/lockDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.buttonTimerDark"
+            app:maxImageSize="35dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/block_element"
+            android:layout_marginStart="10dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/lock_open" />
+        <ProgressBar
+            android:id="@+id/progressBar_stopwatch"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/drawable_circle_dark_stopwatch"
+            android:indeterminate="false"
+            android:max="60"
+            android:progress="0"
+            android:progressDrawable="@drawable/drawable_circle_blue_stopwatch"
+            android:rotation="-90" />
+        <TextView
+            android:id="@+id/countTimerStopwatch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/start_time_stopwatch"
+            android:contentDescription="@string/numStopwatch"
+            android:fontFamily="@font/black_ops_one"
+            android:textColor="@color/colorBlue"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/stringCountTimeLap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/countTimerStopwatch"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/black_ops_one"
+            android:gravity="center"
+            android:contentDescription="@string/numStopwatchLap"
+            android:text="@string/start_time_stopwatch"
+            android:textColor="@color/colorBlue"
+            android:textSize="20sp" />
+        <LinearLayout
+            android:id="@+id/layoutLap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/countTimerStopwatch"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/black_ops_one"
+                android:gravity="center"
+                android:textColor="@color/colorBlue"
+                android:text="@string/lap"
+                android:textSize="17sp" />
+            <TextView
+                android:id="@+id/countLap"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/black_ops_one"
+                android:gravity="center"
+                android:textColor="@color/colorBlue"
+                android:textSize="17sp" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/iconDetailsLap"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/stringCountTimeLap"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:contentDescription="@string/show_details_lap"
+            android:src="@drawable/eye"
+            android:background="?android:attr/selectableItemBackground"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1.7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:id="@+id/layout_listLap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_above="@+id/lineButton"
+            android:background="@drawable/border_list_timer"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="invisible"
+            android:theme="@style/settingsPageDark"
+            >
+            <ListView
+                android:id="@+id/listLap"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lineButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_btn_rest"
+                android:orientation="horizontal"
+                android:id="@+id/borderBtn"
+                tools:ignore="UselessParent">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabPlayPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:maxImageSize="35dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_margin="16dp"
+                    android:contentDescription="@string/start"
+                    android:theme="@style/AppTheme.buttonTimerDark"
+                    app:srcCompat="@drawable/baseline_play_arrow_24" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabLap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme.buttonTimerDark"
+                    app:maxImageSize="35dp"
+                    android:layout_marginStart="80dp"
+                    android:contentDescription="@string/lap"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginEnd="16dp"
+                    app:srcCompat="@drawable/lap_24dp" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme.buttonTimerDark"
+                    app:maxImageSize="35dp"
+                    android:layout_marginStart="144dp"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="@string/shares"
+                    app:srcCompat="@drawable/share" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabRestart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/AppTheme.buttonTimerDark"
+                    app:maxImageSize="35dp"
+                    android:contentDescription="@string/reset"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:srcCompat="@drawable/restore_24dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

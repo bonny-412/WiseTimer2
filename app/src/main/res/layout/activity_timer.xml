@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".manager.TimerActivity">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/lockDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.buttonTimerDark"
+        app:maxImageSize="35dp"
+        android:contentDescription="@string/block_element"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
+        app:srcCompat="@drawable/lock_open" />
+
+    <include layout="@layout/content_timer"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom|center"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_btn_pre"
+            android:orientation="horizontal"
+            android:id="@+id/borderBtn"
+            tools:ignore="UselessParent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabPlayPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:maxImageSize="35dp"
+                android:layout_margin="@dimen/play_margin"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="@string/start_stop"
+                android:theme="@style/AppTheme.buttonTimerDark"
+                app:srcCompat="@drawable/baseline_pause_24" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabStop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/AppTheme.buttonTimerDark"
+                app:maxImageSize="35dp"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="16dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/end"
+                app:srcCompat="@drawable/baseline_stop_24" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/settingsPageDark"
+    >
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:contentDescription="@string/app_name_icon"
+        android:layout_below="@+id/titleVersion"
+        android:src="@drawable/ic_icon_wisetimer"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/idLogo"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="top|center"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/titleVersion"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="70dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="@string/app_name"
+            android:textColor="@color/colorBlue"
+            android:textSize="50sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="serif"
+            android:text="@string/version"
+            android:textColor="@color/colorInfoVersion"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idLogo"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/linkTermsService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:background="@drawable/border_to_link"
+            android:clickable="true"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/terms_service"
+            android:textColor="@color/colorLink"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/linkPrivacyPolice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/privacy_policy"
+            android:background="@drawable/border_to_link"
+            android:textColor="@color/colorLink"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:layout_gravity="start"
+            android:textSize="25sp"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+</ScrollView>

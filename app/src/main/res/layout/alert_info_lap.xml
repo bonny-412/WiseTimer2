@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_round"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:stretchColumns="1"
+    android:padding="20dp" >
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:padding="5dp"
+            android:textColor="@color/colorBlue"
+            android:text="@string/title_info_lap" />
+        <TextView
+            android:id="@+id/infoTextCheckbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingTop="10dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/textView"
+            android:text="@string/text_info_lap"
+            android:textColor="?android:attr/colorBackgroundFloating"
+            />
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/infoTextCheckbox"
+        android:layout_alignParentEnd="true"
+        android:foreground="@drawable/border_btn_alert"
+        android:background="?android:attr/selectableItemBackground"
+        android:text="@string/text_button_cancel"
+        android:contentDescription="@string/text_button_cancel"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorBlue" />
+</RelativeLayout>

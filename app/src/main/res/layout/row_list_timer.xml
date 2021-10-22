@@ -1,0 +1,51 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectedTimer"
+        />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/selectedTimer">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium Text"
+                android:textStyle="bold"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#4d4d4d"
+                android:layout_centerVertical="true"/>
+            <ImageView
+                android:id="@+id/infoTimerBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_info_outline_black_24"
+                android:contentDescription="@string/info_timer"
+                android:clickable="true"
+                android:layout_gravity="end"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_toStartOf="@+id/deleteTimerBtn"
+                android:layout_marginEnd="20dp"
+                android:layout_centerVertical="true"/>
+
+            <ImageView
+                android:id="@+id/deleteTimerBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/delete_24"
+                android:contentDescription="@string/info_timer"
+                android:clickable="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+</RelativeLayout>

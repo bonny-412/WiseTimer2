@@ -1,0 +1,105 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory
+            android:title="@string/settings_header">
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:key="@string/id_voice"
+                    android:summaryOff="@string/off"
+                    android:icon="@drawable/voice_24"
+                    android:summaryOn="@string/on"
+                    android:title="@string/voice_title" />
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:key="@string/id_sound"
+                    android:summaryOff="@string/off"
+                    android:icon="@drawable/sound_24"
+                    android:summaryOn="@string/on"
+                    android:title="@string/sound_title" />
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:key="@string/id_vibration"
+                    android:summaryOff="@string/off"
+                    android:icon="@drawable/vibration_24"
+                    android:summaryOn="@string/on"
+                    android:title="@string/vibration_title" />
+                <ListPreference
+                    android:defaultValue="it"
+                    android:dialogIcon="@drawable/language_24"
+                    android:icon="@drawable/language_24"
+                    android:dialogTitle="@string/languages_dialog_title"
+                    android:entries="@array/languages_text"
+                    android:entryValues="@array/languages_values"
+                    android:key="@string/id_languages"
+                    android:summary="%s"
+                    android:title="@string/languages_title" />
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:key="@string/id_display_on"
+                    android:summaryOff="@string/off"
+                    android:icon="@drawable/phone"
+                    android:summaryOn="@string/on"
+                    android:title="@string/display_on_title" />
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:key="@string/id_side_buttons"
+                    android:summaryOff="@string/off"
+                    android:icon="@drawable/side_buttons"
+                    android:summaryOn="@string/on"
+                    android:title="@string/side_buttons_title" />
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:title="@string/theme">
+                <ListPreference
+                    android:defaultValue="dark"
+                    android:dialogIcon="@drawable/dark_light_mode_icon"
+                    android:dialogTitle="@string/mode_style_dialog_title"
+                    android:entries="@array/mode_style_text"
+                    android:entryValues="@array/mode_style_values"
+                    android:icon="@drawable/dark_light_mode_icon"
+                    android:key="@string/id_mode_style"
+                    android:summary="%s"
+                    android:title="@string/mode_style_title" />
+        </PreferenceCategory>
+        <PreferenceCategory
+            android:title="@string/feedback_help_app">
+                <SwitchPreference
+                    android:defaultValue="true"
+                    android:key="@string/id_active_crash"
+                    android:summaryOff="@string/active_crash_subtitle"
+                    android:icon="@drawable/bug_report_icon"
+                    android:summaryOn="@string/active_crash_subtitle"
+                    android:title="@string/active_crash_title" />
+                <SwitchPreference
+                    android:defaultValue="true"
+                    android:key="@string/id_active_analytics"
+                    android:summaryOff="@string/active_analytics_subtitle"
+                    android:icon="@drawable/analytics_report_icon"
+                    android:summaryOn="@string/active_analytics_subtitle"
+                    android:title="@string/active_analytics_title" />
+
+        </PreferenceCategory>
+        <PreferenceCategory android:title="@string/feedback_header"/>
+        <Preference
+            android:key="@string/id_message_me"
+            android:icon="@drawable/messages"
+            android:title="@string/message_me_title"
+            android:summary="@string/message_me_text" />
+        <Preference
+                android:key="@string/id_comment_app"
+            android:icon="@drawable/star_feedback_icon"
+                android:title="@string/comment_app"
+                android:summary="@string/comment_app_1"/>
+        <Preference
+            android:key="@string/id_other_app"
+            android:icon="@drawable/ic_logo_ab_white"
+            android:title="@string/other_app"
+            android:summary="@string/other_app_1"/>
+        <PreferenceCategory />
+        <Preference
+            android:key="@string/id_delete"
+            android:icon="@drawable/delete_24"
+            android:title="@string/delete_header"
+            android:summary="@string/alert_delete_title" />
+
+</PreferenceScreen>

@@ -1,3 +1,249 @@
-<resources>
-    <string name="app_name">WiseTimer2</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--  *** INFO APP *** -->
+    <string name="app_name">WiseTimer</string>
+    <string name="logo_ab">Bonaiuti Andrea Logo</string>
+    <string name="app_name_icon">WiseTimer icon</string>
+    <string name="version">Version 1.1.2</string>
+
+    <!-- *** TIMER *** -->
+    <string name="series">Sets</string>
+    <string name="seriesToTimerActivity">Sets:</string>
+    <string name="roundsToTimerActivity">Rounds:</string>
+    <string name="work">Workout</string>
+    <string name="second_start_rest_round">Sec rest round</string>
+    <string name="minute_start_rest_round">Min rest round</string>
+    <string name="minute_start_work">Min start work</string>
+    <string name="second_start_work">Sec start work</string>
+    <string name="second_start_rest">Sec start rest</string>
+    <string name="minute_start_rest">Min start work</string>
+    <string name="numSeries">Num series</string>
+    <string name="numRounds">Num rounds</string>
+    <string name="rest">Rest</string>
+    <string name="restRounds">Rest Round</string>
+    <string name="rounds">Round</string>
+    <string name="duePunti">:</string>
+    <string name="timeWork">Time work</string>
+    <string name="timeRest">Time rest</string>
+    <string name="timeRestRounds">Time rest rounds</string>
+    <string name="preWork">Get Ready</string>
+    <string name="preWorkInfoOn">(Activated)</string>
+    <string name="preWorkInfoOff">(Disabled)</string>
+    <string name="title_info_lap">Information</string>
+    <string name="text_info_lap">Allows you to activate the 5 seconds to prepare yourself before \"workout\"/\"rest\"</string>
+    <string name="alert_save_data_nome">Name timer</string>
+    <string name="alert_save_data_title">Save timer</string>
+    <string name="alert_edit_save_data_title">Edit timer</string>
+    <string name="count_characters">Count characters</string>
+    <string name="text_button_save">Save</string>
+    <string name="text_button_cancel">Cancel</string>
+    <string name="alert_delete_list_timer_title">Delete</string>
+    <string name="alert_delete_list_timer_message">Are you sure you want to delete this timer?</string>
+    <string name="alert_delete_list_timer_message_yes">Timer successfully deleted</string>
+    <string name="alert_delete_list_timer_message_error">An error occurred during deletion. Try again later</string>
+    <string name="alert_save_timer_field_required">To save, you must enter a name</string>
+    <string name="alert_save_timer_field_ok">Saving successful</string>
+    <string name="alert_save_timer_field_ko">Error while saving.</string>
+    <string name="seconds_work_rest_0">\'Workout\' and / or \'Rest\' must be at least 1 second</string>
+    <string name="already_existing_name">Name already exists</string>
+    <string name="start_work">Start workout</string>
+    <string name="fine_work">End of workout</string>
+    <string name="start_rest">Start rest</string>
+    <string name="fine_rest">End of rest</string>
+    <string name="start_rest_round">Round rest starts</string>
+    <string name="fine_rest_round">End of rest round</string>
+    <string name="play_timer_info">Start the countdown</string>
+    <string name="play_pause_timer_info">Start / stop the countdown</string>
+    <string name="restart_timer_info">Reset the countdown</string>
+    <string name="timerUsedName">Name of the timer used</string>
+    <string name="timerUsedNameCustomized">Customized</string>
+    <string name="saveTimer">Save timer</string>
+    <string name="listTimer">Saved timer list</string>
+    <string name="end_timer">Timer ended</string>
+    <string name="info_timer">Working times</string>
+    <string name="total_info_alert_timer">Total:</string>
+    <string name="total_info_alert_timer_ic">Total</string>
+    <string name="interval_info_alert_timer">Interval</string>
+    <string name="intervals_info_alert_timer">Intervals</string>
+    <string name="preWork_info_alert_timer">Pre workout:</string>
+    <string name="preWork_info_alert_timer_ic">Pre workout</string>
+    <string name="work_info_alert_timer">Workout:</string>
+    <string name="work_info_alert_timer_ic">Workout</string>
+    <string name="rest_info_alert_timer">Rest:</string>
+    <string name="rest_info_alert_timer_ic">Rest</string>
+    <string name="rest_rounds_info_alert_timer">Rest round:</string>
+    <string name="rest_rounds_info_alert_timer_ic">Rest round</string>
+    <string name="num_rounds_info_alert_timer">Number of rounds:</string>
+    <string name="num_rounds_info_alert_timer_ic">Number of rounds</string>
+
+    <!-- *** STOPWATCH *** -->
+    <string name="start_time_stopwatch">00:00.000</string>
+    <string name="lap">Lap:</string>
+    <string name="lap_statistics">Number laps:</string>
+    <string name="play_pause_info">Start / stop the stopwatch</string>
+    <string name="show_details_lap">Look at statistics</string>
+    <string name="best_lap">Best lap:</string>
+    <string name="worse_lap">Worse lap:</string>
+    <string name="media_lap">Average:</string>
+    <string name="details_lap_text">Statistics</string>
+    <string name="restart_info">Reset the stopwatch</string>
+    <string name="lap_info">Create a new lap</string>
+    <string name="share_laps">Share laps with other people</string>
+    <string name="date_lap_text">Date:</string>
+    <string name="hello_lap_text">Hi,</string>
+    <string name="numLap_lap_text">this is my lap:</string>
+    <string name="numsLap_lap_text">these are my laps:</string>
+    <string name="lap_lap_text">Lap</string>
+    <string name="time_lap_text">Time</string>
+    <string name="time_passed_lap">Passed</string>
+    <string name="worse">Worse</string>
+    <string name="best">Best</string>
+    <string name="lap_name">Lap</string>
+    <string name="stopwatch_running">Stopwatch running</string>
+
+    <!-- *** SETTINGS *** -->
+    <string name="action_settings">Settings</string>
+    <!-- Messages Preferences -->
+    <string name="on">Activated</string>
+    <string name="off">Disabled</string>
+    <string name="button_sades_fn_work">This setting is only valid within the app</string>
+    <string name="sound_title">Sounds</string>
+    <string name="voice_title">Voice</string>
+    <string name="theme">Theme</string>
+    <string name="vibration_title">Vibration</string>
+    <string name="languages_title">Languages</string>
+    <string name="mode_style_title">Style</string>
+    <string name="display_on_title">Display always active</string>
+    <string name="side_buttons_title">Use side buttons</string>
+    <string name="comment_app">Comment on the application</string>
+    <string name="comment_app_1">Your opinion is very important</string>
+    <string name="active_crash_title">Anonymous bug and crash reports</string>
+    <string name="active_analytics_title">Anonymous usage reports</string>
+    <string name="active_crash_subtitle">Automatically send reports of problems to help resolve them</string>
+    <string name="active_analytics_subtitle">Send anonymous and aggregated data used to analyze the use of the app, so you can understand how to improve it</string>
+    <!--Dialog -->
+    <string name="languages_dialog_title">Choose a language</string>
+    <string name="mode_style_dialog_title">Choose a style</string>
+    <!-- Preference Titles -->
+    <string name="settings_header">General</string>
+    <string name="delete_header">Delete</string>
+    <string name="feedback_help_app">Help improve the app</string>
+    <string name="feedback_header">Feedback</string>
+    <!-- Preference id -->
+    <string name="id_voice">voice</string>
+    <string name="id_sound">sound</string>
+    <string name="id_vibration">vibration</string>
+    <string name="id_languages">languages</string>
+    <string name="id_mode_style">modeStyle</string>
+    <string name="id_delete">delete</string>
+    <string name="id_display_on">displayOn</string>
+    <string name="id_side_buttons">side_buttons</string>
+    <string name="id_infoPreWork">infoPreWork</string>
+    <string name="id_showAlertSadeButtons">showAlertSadeButtons</string>
+    <string name="id_message_me">messageMe</string>
+    <string name="id_comment_app">commentApp</string>
+    <string name="id_active_crash">activeCrash</string>
+    <string name="id_active_analytics">activeAnalytics</string>
+    <string name="id_active_messaging">activeMessaging</string>
+    <string name="mode_light">Light</string>
+    <string name="mode_dark">Dark</string>
+    <string name="languages_ita">Italian</string>
+    <string name="languages_ing">English</string>
+    <string name="info_alert_sade_buttons_title">Remember!</string>
+    <string name="info_alert_sade_buttons_timer">For the timer:\n- The button to increase the volume will allow you to start/stop time. \n- The button to turn down the volume will allow you to stop the timer.\n</string>
+    <string name="info_alert_sade_buttons_stopwatch">For the stopwatch: \n- 	The button to increase the volume will allow you to start/stop time. \n- The button to decrease the volume will allow you to save a lap, if you keep the button pressed you will restart the time.\n</string>
+    <string name="info_alert_sade_buttons_disable">Do not show this message again: </string>
+    <string name="message_me_title">Contact the developer</string>
+    <string name="message_me_text">Please contact me with any problems, bugs or general inquiries.\n Thanks.</string>
+    <string name="alert_delete_title">Reset settings</string>
+    <string name="alert_delete_message">Are you sure you want to reset the settings?</string>
+    <string name="alert_delete_message_yes">The settings have been successfully reset</string>
+
+    <!-- *** INFORMATION *** -->
+    <string name="action_information">Information</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_service">Terms of service</string>
+
+    <!-- *** ALERT GENERIC *** -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="close">Close</string>
+    <string name="alert">Alert!</string>
+
+    <!-- *** BUTTON NAVIGATION BAR *** -->
+    <string name="timer_name">Timer</string>
+    <string name="stopwatch_name">Stopwatch</string>
+
+    <!-- *** SEND ERROR/EMAIL *** -->
+    <string name="error_report_title">Error report</string>
+    <string name="error_report_text">Ooops! An error has occurred. \n \n Do you want to report this error?</string>
+    <string name="send_email">Send email</string>
+    <string name="send_email_error">An error occurred while sending the message</string>
+    <string name="send">Send</string>
+    <string name="email_text_required">Empty email text</string>
+    <string name="email_text_placeholder">Email text</string>
+
+    <!-- *** TUTORIAL LIST TIMER *** -->
+    <string name="title_info_page_edit">Tutorial</string>
+    <string name="text_checkbox_info_page_edit">Using the checkbox (to the left of each line) you can choose the timer to use.</string>
+    <string name="text_button_info_page_edit_1">By moving one row from right to left, two buttons can be activated.</string>
+    <string name="text_button_info_page_edit_2">Pressing on the \'pen\'</string>
+    <string name="text_button_info_page_edit_3">you can change the timer name.</string>
+    <string name="text_button_info_page_edit_4">Pressing on the \'trash can\'</string>
+    <string name="text_button_info_page_edit_5">you can delete the timer.</string>
+    <string name="button_next_info_page_edit">Next</string>
+    <string name="back">Back</string>
+    <string name="listTimerName">Timer list saved</string>
+    <string name="list_empty">No data saved</string>
+
+    <!-- *** NOTIFICATIONS *** -->
+    <string name="descriptionPause">Pause</string>
+    <string name="descriptionStop">Stop</string>
+    <string name="notification_channel_id" tools:ignore="Typos">channel_1</string>
+
+    <!-- *** ALERT GENERIC *** -->
+    <string name="pressToExit">Press back again to exit</string>
+    <string name="error_textToSpeech">Text playback error.</string>
+    <string name="disable_screen">Lock all clickable elements</string>
+
+    <!-- *** ALERT WELCOME IN APP *** -->
+    <string name="welcome_app_title">Hello from WiseTimer!</string>
+    <string name="welcome_app_text">Welcome to WiseTimer! WiseTimer is both a timer and a stopwatch.</string>
+
+    <string name="toast_message">Toast message</string>
+    <string name="block_element">Block element</string>
+    <string name="start">Start</string>
+    <string name="shares">Share</string>
+    <string name="reset">Reset</string>
+    <string name="start_stop">Start/Stop</string>
+    <string name="end">End</string>
+    <string name="yes_no">Yes/No</string>
+    <string name="removeRounds">Remove rounds</string>
+    <string name="addRounds">Add rounds</string>
+    <string name="removeRestRounds">Remove rest rounds</string>
+    <string name="addRestRounds">Add rest rounds</string>
+    <string name="removeSeries">Remove series</string>
+    <string name="addSeries">Add series</string>
+    <string name="removeWork">Remove work</string>
+    <string name="addWork">Add work</string>
+    <string name="removeRest">Remove rest</string>
+    <string name="addRest">Add rest</string>
+    <string name="info">Information</string>
+    <string name="show_list_timer">Show timer list saved</string>
+    <string name="other_function">Other functions</string>
+    <string name="bestLapNum">Best lap number</string>
+    <string name="worseLapNum">Worse lap number</string>
+    <string name="averageNum">Average number</string>
+    <string name="numStopwatch">Stopwatch time</string>
+    <string name="numStopwatchLap">Lap time stopwatch</string>
+    <string name="iconAverage">Average icon</string>
+    <string name="iconWorseLap">Worse lap icon</string>
+    <string name="iconBestLap">Best lap icon</string>
+    <string name="iconLap">Lap icon</string>
+    <string name="zero">00</string>
+    <string name="uno">1</string>
+
+    <string name="other_app">Check out other apps</string>
+    <string name="other_app_1">Check out the other apps I\'ve made</string>
+    <string name="id_other_app">otherApp</string>
+
 </resources>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_round"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp" >
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:padding="5dp"
+        android:textColor="@color/colorBlue"
+        android:text="@string/send_email" />
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/textView"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:maxLines="5"
+        android:singleLine="false"
+        android:autofillHints="@string/alert_save_data_nome"
+        android:hint="@string/email_text_placeholder"
+        android:layout_marginTop="10dp"
+        >
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/buttonCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:text="@string/text_button_cancel"
+        android:contentDescription="@string/text_button_cancel"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorBlue"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:foreground="@drawable/border_btn_alert"
+        android:background="?android:attr/selectableItemBackground"
+        />
+
+    <Button
+        android:id="@+id/buttonSendEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/buttonCancel"
+        android:text="@string/send"
+        android:contentDescription="@string/send"
+        android:layout_toStartOf="@+id/buttonCancel"
+        android:textColor="@color/colorBlue"
+        android:padding="10dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:foreground="@drawable/border_btn_alert"
+        android:background="?android:attr/selectableItemBackground"
+        />
+
+</RelativeLayout>

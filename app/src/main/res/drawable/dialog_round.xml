@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?android:attr/windowBackground" />
+    <corners
+        android:bottomLeftRadius="100dp"
+        android:topRightRadius="100dp"/>
+    <stroke android:width="2.5dp" android:color="@color/colorBlue" />
+    <padding
+        android:bottom="32.5dp"
+        android:left="32.5dp"
+        android:right="22.5dp"
+        android:top="22.5dp" />
+</shape>

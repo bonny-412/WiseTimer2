@@ -1,0 +1,98 @@
+<resources>
+
+    <style name="PopupMenuListView" parent="@style/Widget.AppCompat.ListView.DropDown">
+        <item name="android:divider">@color/textColorBlack</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorBlue</item>
+        <item name="android:textColor">@color/textColorBlack</item>
+        <item name="android:windowBackground">@color/colorPrimary</item> <!--Per bottoni timer -->
+        <item name="android:drawableTint">@color/textColorBlack</item> <!-- Per bottoni '+' e '-' -->
+        <item name="android:colorBackgroundFloating">@color/textColorWhite</item> <!-- Per bottoni impostazioni -->
+        <item name="android:iconTint">?android:attr/windowBackground</item>
+        <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+    </style>
+
+    <style name="AppThemeLight" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/colorBlue</item>
+        <item name="colorPrimaryDark">@color/colorBlue</item>
+        <item name="colorAccent">@color/colorBlue</item>
+        <item name="android:textColor">@color/textColorBlack</item>
+        <item name="android:windowBackground">@color/textColorWhite</item> <!--Per bottoni timer -->
+        <item name="android:drawableTint">@color/textColorBlack</item> <!-- Per bottoni '+' e '-' -->
+        <item name="android:colorBackgroundFloating">@color/textColorBlack</item> <!-- Per bottoni impostazioni -->
+        <item name="android:iconTint">?android:attr/windowBackground</item>
+        <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+    </style>
+
+    <style name="settingsPageDark" parent="Theme.AppCompat">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="colorAccent">@color/colorBlue</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="android:colorAccent">@color/colorBlue</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:iconTint">?android:attr/windowBackground</item>
+        <item name="android:colorBackgroundFloating">@color/textColorWhite</item>
+        <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+    </style>
+
+    <style name="settingsPageLight" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="colorAccent">@color/colorBlue</item>
+        <item name="colorPrimaryDark">@color/colorBlue</item>
+        <item name="android:colorAccent">@color/colorBlue</item>
+        <item name="colorPrimary">@color/colorBlue</item>
+        <item name="android:windowBackground">@color/textColorWhite</item>
+        <item name="android:colorBackgroundFloating">@color/textColorBlack</item>
+        <item name="android:iconTint">?android:attr/windowBackground</item>
+        <item name="android:drawableTint">@color/textColorWhite</item>
+        <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppThemeLight.NoActionBar" parent="AppThemeLight">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.buttonTimerDark" parent="buttonTimer">
+        <item name="android:tint">?android:attr/windowBackground</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColor">@color/textColorBlack</item>
+    </style> <!-- Per menu impostazioni nella pagina 'mainactivity' -->
+    <!-- Per menu impostazioni nella pagina 'mainactivity' -->
+
+    <style name="AlertDialogStyleLight" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:textColor">@color/colorBlue</item>
+        <item name="android:textColorPrimary">@color/textColorBlack</item>
+    </style>
+
+    <style name="AlertDialogStyleDark" parent="Theme.AppCompat.Dialog">
+        <item name="android:textColorPrimary">@color/textColorWhite</item>
+    </style>
+    <!--_____________________________________________________________________________________________-->
+
+    <style name="buttonTimer">
+        <item name="android:layout_gravity">bottom|end</item>
+        <item name="android:background">@drawable/ripple_effect</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@android:anim/slide_out_right</item>
+    </style>
+
+  </resources>

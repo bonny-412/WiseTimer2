@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        >
+
+        <include layout="@layout/content_main" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="4.5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/play_margin"
+            android:tint="?android:attr/iconTint"
+            app:backgroundTint="@color/colorBlue"
+            android:contentDescription="@string/start"
+            app:maxImageSize="35dp"
+            android:background="?android:attr/selectableItemBackground"
+            app:srcCompat="@drawable/baseline_play_arrow_24" />
+        <include layout="@layout/float_button_save"/>
+    </RelativeLayout>
+</LinearLayout>
