@@ -11,9 +11,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -153,9 +151,6 @@ public class ListTimer extends AppCompatActivity implements CompoundButton.OnChe
         View viewInfoDialog = View.inflate(context, R.layout.alert_info, null);
         builder.setCancelable(false);
         builder.setView(viewInfoDialog);
-        final LinearLayout lineCheckbox = viewInfoDialog.findViewById(R.id.lineCheckbox);
-        final RelativeLayout lineButton = viewInfoDialog.findViewById(R.id.lineButton);
-        final Button buttonNext = viewInfoDialog.findViewById(R.id.buttonNext);
         Button buttonCancel = viewInfoDialog.findViewById(R.id.buttonCancel);
         final AlertDialog dialog = builder.create();
         if(dialog != null){
@@ -164,11 +159,6 @@ public class ListTimer extends AppCompatActivity implements CompoundButton.OnChe
                 dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
             }
         }
-        buttonNext.setOnClickListener(v -> {
-            lineButton.setVisibility(View.VISIBLE);
-            lineCheckbox.setVisibility(View.GONE);
-            buttonNext.setVisibility(View.INVISIBLE);
-        });
         buttonCancel.setOnClickListener(v -> {
             if(dialog != null)
                 dialog.dismiss();

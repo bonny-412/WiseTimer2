@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Gianni/AndroidStudioProjects/WiseTimer2/app/src/main/res/drawable/language_24.xml" value="0.14010416666666667" />
         <entry key="..\:/Users/Gianni/AndroidStudioProjects/WiseTimer2/app/src/main/res/layout/activity_main.xml" value="0.20923913043478262" />
+        <entry key="..\:/Users/Gianni/AndroidStudioProjects/WiseTimer2/app/src/main/res/layout/alert_info.xml" value="0.12395833333333334" />
+        <entry key="..\:/Users/Gianni/AndroidStudioProjects/WiseTimer2/app/src/main/res/layout/alert_info_sade_buttons.xml" value="0.12395833333333334" />
+        <entry key="..\:/Users/Gianni/AndroidStudioProjects/WiseTimer2/app/src/main/res/layout/custom_action_bar_list_timer.xml" value="0.12395833333333334" />
       </map>
     </option>
   </component>

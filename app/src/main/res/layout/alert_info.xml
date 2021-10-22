@@ -42,21 +42,4 @@
             android:foreground="@drawable/border_btn_alert"
             android:background="?android:attr/selectableItemBackground"
             />
-
-        <Button
-            android:id="@+id/buttonNext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_toStartOf="@+id/buttonCancel"
-            android:layout_below="@+id/lineCheckbox"
-            android:text="@string/button_next_info_page_edit"
-            android:contentDescription="@string/button_next_info_page_edit"
-            android:textColor="@color/colorBlue"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="15dp"
-            android:padding="10dp"
-            android:foreground="@drawable/border_btn_alert"
-            android:background="?android:attr/selectableItemBackground"
-            />
 </RelativeLayout>
