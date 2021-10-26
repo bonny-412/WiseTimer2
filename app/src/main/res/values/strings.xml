@@ -133,7 +133,6 @@
     <string name="id_sound">sound</string>
     <string name="id_vibration">vibration</string>
     <string name="id_languages">languages</string>
-    <string name="id_mode_style">modeStyle</string>
     <string name="id_delete">delete</string>
     <string name="id_display_on">displayOn</string>
     <string name="id_side_buttons">side_buttons</string>

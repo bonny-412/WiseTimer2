@@ -78,10 +78,7 @@ public class TimerActivity extends AppCompatActivity implements TextToSpeech.OnI
                 }
                 mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, savedInstanceState);
             }
-            if (settingBean != null)
-                setTheme("dark".equalsIgnoreCase(settingBean.getModeStyles()) ? R.style.AppTheme : R.style.AppThemeLight);
-            else
-                setTheme(R.style.AppTheme);
+            setTheme(R.style.AppTheme);
             try {
                 if (this.getSupportActionBar() != null)
                     this.getSupportActionBar().hide();

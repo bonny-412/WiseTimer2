@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseMessaging.getInstance().setAutoInitEnabled(settingBean.isActiveAnalytics());
             }
             mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, savedInstanceState);
-            setTheme("dark".equalsIgnoreCase(settingBean.getModeStyles()) ? R.style.AppTheme_NoActionBar : R.style.AppThemeLight_NoActionBar);
+            setTheme(R.style.AppTheme_NoActionBar);
             util.setAppLocale(settingBean.getLanguages(), context);
             setContentView(R.layout.activity_main);
             final Toolbar toolbar = findViewById(R.id.toolbar);

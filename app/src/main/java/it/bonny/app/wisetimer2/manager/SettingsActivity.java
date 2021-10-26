@@ -50,7 +50,7 @@ public class SettingsActivity extends AppCompatActivity {
                 mFirebaseAnalytics.setAnalyticsCollectionEnabled(settingBean.isActiveAnalytics());
             mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, savedInstanceState);
             setTitle(R.string.action_settings);
-            setTheme("dark".equalsIgnoreCase(settingBean.getModeStyles()) ? R.style.settingsPageDark : R.style.settingsPageLight);
+            setTheme(R.style.AppTheme);
             setContentView(R.layout.settings_activity);
             SettingsFragment settingsFragment = new SettingsFragment();
             Bundle bundle = new Bundle();
@@ -76,7 +76,7 @@ public class SettingsActivity extends AppCompatActivity {
     public static class SettingsFragment extends PreferenceFragmentCompat {
         private SwitchPreference activeCrash, activeAnalytics;
         private CheckBoxPreference sound, vibration, displayOn, sideButtons, voice;
-        private ListPreference languages, modeStyles;
+        private ListPreference languages;
         private Preference delete, messageMe, commentApp, otherApp;
         private final Util util = new Util();
         private int backNext = 0;
@@ -197,16 +197,6 @@ public class SettingsActivity extends AppCompatActivity {
                     }
                     return false;
                 });
-                modeStyles.setOnPreferenceChangeListener((preference, newValue) -> {
-                    String val = (String) newValue;
-                    settingBean.setModeStyles(val);
-                    modeStyles.setValue(val);
-                    if(getActivity() != null) {
-                        util.saveSettingBean(settingBean, getActivity());
-                        getActivity().recreate();
-                    }
-                    return false;
-                });
             }catch (Exception e){
                 util.errorReport(getActivity(), e.toString(), settingBean, getContext());
                 FirebaseCrashlytics.getInstance().recordException(e);
@@ -218,7 +208,6 @@ public class SettingsActivity extends AppCompatActivity {
             sound = getPreferenceManager().findPreference(getString(R.string.id_sound));
             vibration = getPreferenceManager().findPreference(getString(R.string.id_vibration));
             languages = getPreferenceManager().findPreference(getString(R.string.id_languages));
-            modeStyles = getPreferenceManager().findPreference(getString(R.string.id_mode_style));
             delete = getPreferenceManager().findPreference(getString(R.string.id_delete));
             messageMe = getPreferenceManager().findPreference(getString(R.string.id_message_me));
             commentApp = getPreferenceManager().findPreference(getString(R.string.id_comment_app));
@@ -231,7 +220,6 @@ public class SettingsActivity extends AppCompatActivity {
             sound.setChecked(settingBean.isSound());
             vibration.setChecked(settingBean.isVibration());
             languages.setValue(settingBean.getLanguages());
-            modeStyles.setValue(settingBean.getModeStyles());
             displayOn.setChecked(settingBean.isDisplayOn());
             sideButtons.setChecked(settingBean.isSideButtons());
             activeCrash.setChecked(settingBean.isActiveCrash());
@@ -239,13 +227,8 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         private void createDialogInfoSadeButtons(){
-            AlertDialog.Builder builder;
+            AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleDark);
             backNext = 0;
-            if(settingBean.isDark()){
-                builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleDark);
-            }else {
-                builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleLight);
-            }
             View viewInfoDialog = View.inflate(getContext(), R.layout.alert_info_sade_buttons, null);
             builder.setCancelable(false);
             builder.setView(viewInfoDialog);
@@ -286,12 +269,7 @@ public class SettingsActivity extends AppCompatActivity {
         }
 
         private void createDialogSendEmail(){
-            AlertDialog.Builder builder;
-            if(settingBean.isDark()){
-                builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleDark);
-            }else {
-                builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleLight);
-            }
+            AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleDark);
             View viewInfoDialog = View.inflate(getContext(), R.layout.alert_send_email, null);
             builder.setCancelable(false);
             builder.setView(viewInfoDialog);

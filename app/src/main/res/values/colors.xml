@@ -9,6 +9,15 @@
     <color name="transparent">#00FFFFFF</color>
     <color name="colorLink">#009CAB</color>
     <color name="colorInfoVersion">#A6A6A6</color>
+
+    <color name="newColorBg">#48426D</color>
+    <color name="newColorBgDark">#312C51</color>
+    <color name="newColorElement">#F0C38E</color>
+    <color name="newColorBlue">#B1D8FF</color>
+    <color name="newColorRed">#F1AA9B</color>
+    <color name="newColorYellow">#E7CF91</color>
+    <color name="newColorText">#C8C5B4</color>
+
     <!--Color Toast-->
     <color name="defaultTextColorToast">#FFFFFF</color>
     <color name="errorColorToast">#D50000</color>

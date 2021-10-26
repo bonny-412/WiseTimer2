@@ -644,12 +644,7 @@ public class TimerFragment extends Fragment {
 
     private void createDialogSaveData(){
         final ManagerDB managerDB = new ManagerDB(getActivity());
-        AlertDialog.Builder builder;
-        if(settingBean.isDark()){
-            builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogStyleDark);
-        }else {
-            builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogStyleLight);
-        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogStyleDark);;
         View viewSaveDialog = View.inflate(getContext(), R.layout.alert_save_timer, null);
         builder.setCancelable(false);
         builder.setView(viewSaveDialog);
@@ -894,12 +889,7 @@ public class TimerFragment extends Fragment {
     }
 
     private void createDialogInfoLap(){
-        AlertDialog.Builder builder;
-        if(settingBean.isDark()){
-            builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleDark);
-        }else {
-            builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleLight);
-        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleDark);;
         View viewInfoDialog = View.inflate(getContext(), R.layout.alert_info_lap, null);
         builder.setCancelable(false);
         builder.setView(viewInfoDialog);
@@ -992,12 +982,7 @@ public class TimerFragment extends Fragment {
             firstStart = prefs.getBoolean("firstStart", true);
         }
         if(firstStart){
-            AlertDialog.Builder builder;
-            if(settingBean.isDark()){
-                builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogStyleDark);
-            }else {
-                builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogStyleLight);
-            }
+            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AlertDialogStyleDark);
             View viewSaveDialog = View.inflate(getContext(), R.layout.alert_welcome, null);
             builder.setCancelable(false);
             builder.setView(viewSaveDialog);

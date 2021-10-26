@@ -9,7 +9,6 @@ public class SettingBean implements Serializable {
     private boolean voice;
     private boolean vibration;
     private String languages;
-    private String modeStyles;
     private boolean infoPreWork;
     private boolean displayOn;
     private boolean sideButtons;
@@ -43,9 +42,6 @@ public class SettingBean implements Serializable {
 
     public boolean isVibration(){ return vibration; }
     public void setVibration(boolean vibration){ this.vibration = vibration; }
-
-    public String getModeStyles(){ return modeStyles; }
-    public void setModeStyles(String modeStyles) { this.modeStyles = modeStyles; }
 
     public  boolean isInfoPreWork(){ return  infoPreWork; }
     public void setInfoPreWork(boolean infoPreWork) { this.infoPreWork = infoPreWork; }
@@ -106,17 +102,10 @@ public class SettingBean implements Serializable {
         return  result;
     }
 
-    public boolean isDark(){
-        boolean result = false;
-        if("dark".equalsIgnoreCase(modeStyles))
-            result = true;
-        return result;
-    }
-
     @NonNull
     public String toString(){
         return " voice: " + voice + " sound: " + sound + " languages: " + languages + " vibration: " + vibration +
-                " modeStyles: " + modeStyles + " activeCrash: " + activeCrash + " activeAnalytics: " + activeAnalytics +
+                " activeCrash: " + activeCrash + " activeAnalytics: " + activeAnalytics +
                 " activeMessaging: " + activeMessaging;
     }
 }

@@ -35,7 +35,7 @@ public class InformationActivity extends AppCompatActivity {
             mFirebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_ITEM, savedInstanceState);
             settingBean = util.getSettingBeanSaved(activity);
             setTitle(R.string.action_information);
-            setTheme("dark".equalsIgnoreCase(settingBean.getModeStyles()) ? R.style.settingsPageDark : R.style.settingsPageLight);
+            setTheme(R.style.AppTheme);
             setContentView(R.layout.information_activity);
             initElement();
             ActionBar actionBar = getSupportActionBar();

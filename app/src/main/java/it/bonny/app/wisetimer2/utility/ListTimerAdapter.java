@@ -106,12 +106,7 @@ public class ListTimerAdapter extends ArrayAdapter<TimerBean> {
 
     private void getAlertDialogDeleteListTimer(final int position, final long id, SettingBean settingBean){
         final ManagerDB managerDB = new ManagerDB(getContext());
-        AlertDialog.Builder builder;
-        if(settingBean.isDark()){
-            builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleDark);
-        }else {
-            builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleLight);
-        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleDark);
         View viewInfoDialog = View.inflate(getContext(), R.layout.alert_delete_timer, null);
         builder.setCancelable(false);
         builder.setView(viewInfoDialog);

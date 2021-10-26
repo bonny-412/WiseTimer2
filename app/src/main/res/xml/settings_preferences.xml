@@ -49,19 +49,6 @@
         </PreferenceCategory>
 
         <PreferenceCategory
-            android:title="@string/theme">
-                <ListPreference
-                    android:defaultValue="dark"
-                    android:dialogIcon="@drawable/dark_light_mode_icon"
-                    android:dialogTitle="@string/mode_style_dialog_title"
-                    android:entries="@array/mode_style_text"
-                    android:entryValues="@array/mode_style_values"
-                    android:icon="@drawable/dark_light_mode_icon"
-                    android:key="@string/id_mode_style"
-                    android:summary="%s"
-                    android:title="@string/mode_style_title" />
-        </PreferenceCategory>
-        <PreferenceCategory
             android:title="@string/feedback_help_app">
                 <SwitchPreference
                     android:defaultValue="true"

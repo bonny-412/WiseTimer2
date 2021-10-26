@@ -111,7 +111,7 @@
             android:orientation="vertical"
             android:padding="10dp"
             android:visibility="invisible"
-            android:theme="@style/settingsPageDark"
+            android:theme="@style/AppTheme"
             >
             <ListView
                 android:id="@+id/listLap"

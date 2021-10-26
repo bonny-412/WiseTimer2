@@ -12,7 +12,7 @@
         android:background="@drawable/border_list_timer"
         android:padding="25dp"
         android:layout_marginBottom="30dp"
-        android:theme="@style/settingsPageDark">
+        android:theme="@style/AppTheme">
 
     <ListView
         android:layout_width="match_parent"

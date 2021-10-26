@@ -230,13 +230,11 @@ public class StopwatchFragment extends Fragment {
         fabShare = root.findViewById(R.id.fabShare);
         fabLap = root.findViewById(R.id.fabLap);
         progressBar_stopwatch = root.findViewById(R.id.progressBar_stopwatch);
-        if("dark".equals(settingBean.getModeStyles())){
-            progressBar_stopwatch.setBackground(ContextCompat.getDrawable(root.getContext(), R.drawable.drawable_circle_dark_blue));
-        }else if("light".equals(settingBean.getModeStyles())){
-            progressBar_stopwatch.setBackground(ContextCompat.getDrawable(root.getContext(), R.drawable.drawable_circle_light));
-        }
+
+        progressBar_stopwatch.setBackground(ContextCompat.getDrawable(root.getContext(), R.drawable.drawable_circle_dark_blue));
         progressBar_stopwatch.setMax(60);
         progressBar_stopwatch.setProgress(0);
+
         fabLap.hide();
         fabShare.hide();
         ListView listLap = root.findViewById(R.id.listLap);
@@ -526,12 +524,7 @@ public class StopwatchFragment extends Fragment {
 
     @SuppressLint("DefaultLocale")
     private void createDialogInfo(){
-        AlertDialog.Builder builder;
-        if(settingBean.isDark()){
-            builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleDark);
-        }else {
-            builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleLight);
-        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogStyleDark);
         View viewInfoDialog = View.inflate(getContext(), R.layout.alert_show_details, null);
         builder.setCancelable(false);
         builder.setView(viewInfoDialog);

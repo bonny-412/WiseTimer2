@@ -49,7 +49,7 @@ public class ListTimer extends AppCompatActivity implements CompoundButton.OnChe
             if(settingBean == null)
                 settingBean = util.getSettingBeanSaved(this);
             setTitle(getString(R.string.listTimerName));
-            setTheme("dark".equalsIgnoreCase(settingBean.getModeStyles()) ? R.style.settingsPageDark : R.style.settingsPageLight);
+            setTheme(R.style.AppTheme);
             util.setAppLocale(settingBean.getLanguages(), context);
             setContentView(R.layout.activity_list_timer);
             ActionBar actionBar = getSupportActionBar();
@@ -142,12 +142,7 @@ public class ListTimer extends AppCompatActivity implements CompoundButton.OnChe
     }
 
     private void createDialogInfo(){
-        AlertDialog.Builder builder;
-        if(settingBean.isDark()){
-            builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleDark);
-        }else {
-            builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleLight);
-        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleDark);
         View viewInfoDialog = View.inflate(context, R.layout.alert_info, null);
         builder.setCancelable(false);
         builder.setView(viewInfoDialog);

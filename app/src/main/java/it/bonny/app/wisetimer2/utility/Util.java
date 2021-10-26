@@ -241,12 +241,7 @@ public class Util {
     public void changeColorComponents(ChangeColorComponentsBean bean){
         int color = 0, colorBorder = 0, colorDrawable = 0;
         String textType = "";
-        if("dark".equals(bean.getSettingBean().getModeStyles()))
-            bean.getProgressBarCircle().setBackground(
-                    ContextCompat.getDrawable(bean.getContext(), R.drawable.drawable_circle_dark_blue));
-        else if("light".equals(bean.getSettingBean().getModeStyles()))
-            bean.getProgressBarCircle().setBackground(
-                    ContextCompat.getDrawable(bean.getContext(), R.drawable.drawable_circle_light));
+        bean.getProgressBarCircle().setBackground(ContextCompat.getDrawable(bean.getContext(), R.drawable.drawable_circle_dark_blue));
         if(StateType.WORK.equals(bean.getType())){
             colorDrawable = R.drawable.drawable_circle_green;
             colorBorder = R.drawable.border_btn_work;
@@ -283,13 +278,7 @@ public class Util {
     }
 
     public void getAlertDialogDeleteSettings(SettingBean settingBean, final Activity activity, final Context context){
-        AlertDialog.Builder builder;
-        if(settingBean.isDark()){
-            builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleDark);
-        }else {
-            builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleLight);
-        }
-        //Bonny
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleDark);;
         View viewInfoDialog = View.inflate(context, R.layout.alert_reset_settings, null);
         builder.setCancelable(false);
         builder.setView(viewInfoDialog);
@@ -339,7 +328,6 @@ public class Util {
         editor.putBoolean(activity.getString(R.string.id_sound), settingBean.isSound());
         editor.putBoolean(activity.getString(R.string.id_vibration), settingBean.isVibration());
         editor.putString(activity.getString(R.string.id_languages), settingBean.getLanguages());
-        editor.putString(activity.getString(R.string.id_mode_style), settingBean.getModeStyles());
         editor.putBoolean(activity.getString(R.string.id_infoPreWork), settingBean.isInfoPreWork());
         editor.putBoolean(activity.getString(R.string.id_display_on), settingBean.isDisplayOn());
         editor.putBoolean(activity.getString(R.string.id_side_buttons), settingBean.isSideButtons());
@@ -356,7 +344,6 @@ public class Util {
         editor.remove(activity.getString(R.string.id_sound));
         editor.remove(activity.getString(R.string.id_vibration));
         editor.remove(activity.getString(R.string.id_languages));
-        editor.remove(activity.getString(R.string.id_mode_style));
         editor.remove(activity.getString(R.string.id_infoPreWork));
         editor.remove(activity.getString(R.string.id_display_on));
         editor.remove(activity.getString(R.string.id_side_buttons));
@@ -411,7 +398,6 @@ public class Util {
         settingBean.setSound(sharedPreferences.getBoolean(activity.getString(R.string.id_sound), false));
         settingBean.setVibration(sharedPreferences.getBoolean(activity.getString(R.string.id_vibration), false));
         settingBean.setLanguages(sharedPreferences.getString(activity.getString(R.string.id_languages), findLanguageDevice(activity.getApplicationContext())));
-        settingBean.setModeStyles(sharedPreferences.getString(activity.getString(R.string.id_mode_style), "dark"));
         settingBean.setInfoPreWork(sharedPreferences.getBoolean(activity.getString(R.string.id_infoPreWork), true));
         settingBean.setDisplayOn(sharedPreferences.getBoolean(activity.getString(R.string.id_display_on), false));
         settingBean.setSideButtons(sharedPreferences.getBoolean(activity.getString(R.string.id_side_buttons), false));
@@ -496,12 +482,7 @@ public class Util {
     }
 
     public void errorReport(final Activity activity, final String errorText, SettingBean settingBean, final Context context){
-        AlertDialog.Builder builder;
-        if(settingBean.isDark()){
-            builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleDark);
-        }else {
-            builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleLight);
-        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleDark);;
         View viewInfoDialog = View.inflate(context, R.layout.alert_error_report, null);
         builder.setCancelable(false);
         builder.setView(viewInfoDialog);
@@ -683,12 +664,7 @@ public class Util {
     }
 
     public void createDialogInfoTimer(TimerBean timerBeanCurrent, SettingBean settingBean, String title, Context context) {
-        AlertDialog.Builder builder;
-        if(settingBean.isDark()){
-            builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleDark);
-        }else {
-            builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleLight);
-        }
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleDark);;
         View viewInfoDialog = View.inflate(context, R.layout.alert_info_timer, null);
         builder.setCancelable(false);
         builder.setView(viewInfoDialog);
