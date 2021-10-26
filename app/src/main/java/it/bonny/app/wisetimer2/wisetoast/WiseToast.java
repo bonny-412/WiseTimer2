@@ -33,7 +33,7 @@ public class WiseToast {
     @CheckResult
     public Toast warning(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, WiseToastUtil.getDrawable(context, R.drawable.ic_error_outline_white_24dp_toast),
-                WiseToastUtil.getColor(context, R.color.warningColorToast), WiseToastUtil.getColor(context, R.color.defaultTextColorToast),
+                WiseToastUtil.getColor(context, R.color.newColorYellow), WiseToastUtil.getColor(context, R.color.newColorBg),
                 duration, withIcon, true);
     }
 
@@ -45,7 +45,7 @@ public class WiseToast {
     @CheckResult
     public Toast info(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, WiseToastUtil.getDrawable(context, R.drawable.ic_info_outline_white_24dp_toast),
-                WiseToastUtil.getColor(context, R.color.infoColorToast), WiseToastUtil.getColor(context, R.color.defaultTextColorToast),
+                WiseToastUtil.getColor(context, R.color.newColorBlue), WiseToastUtil.getColor(context, R.color.newColorBg),
                 duration, withIcon, true);
     }
 
@@ -57,7 +57,7 @@ public class WiseToast {
     @CheckResult
     public Toast success(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, WiseToastUtil.getDrawable(context, R.drawable.ic_check_white_24dp_toast),
-                WiseToastUtil.getColor(context, R.color.successColorToast), WiseToastUtil.getColor(context, R.color.defaultTextColorToast),
+                WiseToastUtil.getColor(context, R.color.newColorGreen), WiseToastUtil.getColor(context, R.color.newColorBg),
                 duration, withIcon, true);
     }
 
@@ -69,7 +69,7 @@ public class WiseToast {
     @CheckResult
     public Toast error(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, WiseToastUtil.getDrawable(context, R.drawable.ic_clear_white_24dp_toast),
-                WiseToastUtil.getColor(context, R.color.errorColorToast), WiseToastUtil.getColor(context, R.color.defaultTextColorToast),
+                WiseToastUtil.getColor(context, R.color.newColorRed), WiseToastUtil.getColor(context, R.color.newColorBg),
                 duration, withIcon, true);
     }
 

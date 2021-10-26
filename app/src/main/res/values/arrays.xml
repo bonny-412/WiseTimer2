@@ -8,13 +8,4 @@
         <item>it</item>
         <item>en</item>
     </string-array>
-    <!-- Mode_Style -->
-    <string-array name="mode_style_text">
-        <item>@string/mode_dark</item>
-        <item>@string/mode_light</item>
-    </string-array>
-    <string-array name="mode_style_values">
-        <item>dark</item>
-        <item>light</item>
-    </string-array>
 </resources>

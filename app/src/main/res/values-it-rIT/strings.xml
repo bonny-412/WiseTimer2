@@ -32,7 +32,6 @@
     <string name="text_info_lap">Permette di attivare i 5 secondi per prepararti prima del \"allenamento\"/\"riposo\"</string>
     <string name="alert_save_data_nome">Nome timer</string>
     <string name="alert_save_data_title">Salva timer</string>
-    <string name="alert_edit_save_data_title">Modifica timer</string>
     <string name="count_characters">Conta caratteri</string>
     <string name="text_button_save">Salva</string>
     <string name="text_button_cancel">Annulla</string>
@@ -108,10 +107,8 @@
     <string name="off">Disattivato</string>
     <string name="sound_title">Suoni</string>
     <string name="voice_title">Voce</string>
-    <string name="theme">Tema</string>
     <string name="vibration_title">Vibrazione</string>
     <string name="languages_title">Lingua</string>
-    <string name="mode_style_title">Stile</string>
     <string name="display_on_title">Display sempre attivo</string>
     <string name="side_buttons_title">Utilizzare pulsanti laterali</string>
     <string name="comment_app">Commenta l\' applicazione</string>
@@ -124,7 +121,6 @@
     <string name="active_analytics_subtitle">Invia dati anonimi e aggregati usati per analizzare l\' utilizzo dell\' app, così da poter capire come migliorarla</string>
     <!--Dialog -->
     <string name="languages_dialog_title">Scegli una lingua</string>
-    <string name="mode_style_dialog_title">Scegli uno stile</string>
     <!-- Preference Titles -->
     <string name="settings_header">Generali</string>
     <string name="feedback_header">Feedback</string>
@@ -146,8 +142,6 @@
     <string name="id_active_crash">activeCrash</string>
     <string name="id_active_analytics">activeAnalytics</string>
     <string name="id_active_messaging">activeMessaging</string>
-    <string name="mode_light">Chiaro</string>
-    <string name="mode_dark">Scuro</string>
     <string name="info_alert_sade_buttons_title">Ricorda!</string>
     <string name="info_alert_sade_buttons_timer">Per il timer:\n\n- Il bottone per alzare il volume ti permetterà di avviare/fermare il tempo.\n\n- Il bottone per abbassare il volume ti permetterà di interrompere il timer.\n</string>
     <string name="info_alert_sade_buttons_stopwatch">Per il cronometro:\n\n- Il bottone per alzare il volume ti permetterà di avviare/fermare il tempo.\n\n- Il bottone per abbassare il volume ti permetterà di salvare un giro.\n</string>
@@ -187,11 +181,6 @@
     <!-- *** TUTORIAL LIST TIMER *** -->
     <string name="title_info_page_edit">Tutorial</string>
     <string name="text_checkbox_info_page_edit">Utilizzado la checkbox (a sinistra di ogni singola riga) è possibile scegliere il timer da utilizzare.</string>
-    <string name="text_button_info_page_edit_1">Spostando da destra verso sinistra una riga è possibile attivare due bottoni.</string>
-    <string name="text_button_info_page_edit_2">Premendo sulla \'penna\'</string>
-    <string name="text_button_info_page_edit_3">è possibile modificare il nome del timer. </string>
-    <string name="text_button_info_page_edit_4">Premendo sul \'cestino\'</string>
-    <string name="text_button_info_page_edit_5"> è possibile eliminare il timer.</string>
     <string name="button_next_info_page_edit">Prossimo</string>
     <string name="back">Indietro</string>
     <string name="listTimerName">Lista timer salvati</string>

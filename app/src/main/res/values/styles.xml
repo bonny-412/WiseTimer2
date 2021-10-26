@@ -23,6 +23,8 @@
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <!-- Customize color of navigation drawer icon and back arrow -->
         <item name="colorControlNormal">@color/newColorElement</item>
+        <item name="android:titleTextStyle">@color/newColorElement</item>
+        <item name="android:subtitleTextStyle">@color/newColorElement</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="AppTheme">
@@ -35,6 +37,11 @@
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:textColor">@color/newColorElement</item>
+        <item name="android:colorBackground">@color/newColorBgDark</item>
+    </style>
 
     <style name="AlertDialogStyleDark" parent="Theme.AppCompat.Dialog">
         <item name="android:textColorPrimary">@color/textColorWhite</item>

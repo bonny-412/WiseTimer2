@@ -32,7 +32,6 @@
     <string name="text_info_lap">Allows you to activate the 5 seconds to prepare yourself before \"workout\"/\"rest\"</string>
     <string name="alert_save_data_nome">Name timer</string>
     <string name="alert_save_data_title">Save timer</string>
-    <string name="alert_edit_save_data_title">Edit timer</string>
     <string name="count_characters">Count characters</string>
     <string name="text_button_save">Save</string>
     <string name="text_button_cancel">Cancel</string>
@@ -108,10 +107,8 @@
     <string name="button_sades_fn_work">This setting is only valid within the app</string>
     <string name="sound_title">Sounds</string>
     <string name="voice_title">Voice</string>
-    <string name="theme">Theme</string>
     <string name="vibration_title">Vibration</string>
     <string name="languages_title">Languages</string>
-    <string name="mode_style_title">Style</string>
     <string name="display_on_title">Display always active</string>
     <string name="side_buttons_title">Use side buttons</string>
     <string name="comment_app">Comment on the application</string>
@@ -122,7 +119,6 @@
     <string name="active_analytics_subtitle">Send anonymous and aggregated data used to analyze the use of the app, so you can understand how to improve it</string>
     <!--Dialog -->
     <string name="languages_dialog_title">Choose a language</string>
-    <string name="mode_style_dialog_title">Choose a style</string>
     <!-- Preference Titles -->
     <string name="settings_header">General</string>
     <string name="delete_header">Delete</string>
@@ -143,8 +139,6 @@
     <string name="id_active_crash">activeCrash</string>
     <string name="id_active_analytics">activeAnalytics</string>
     <string name="id_active_messaging">activeMessaging</string>
-    <string name="mode_light">Light</string>
-    <string name="mode_dark">Dark</string>
     <string name="languages_ita">Italian</string>
     <string name="languages_ing">English</string>
     <string name="info_alert_sade_buttons_title">Remember!</string>
@@ -184,11 +178,6 @@
     <!-- *** TUTORIAL LIST TIMER *** -->
     <string name="title_info_page_edit">Tutorial</string>
     <string name="text_checkbox_info_page_edit">Using the checkbox (to the left of each line) you can choose the timer to use.</string>
-    <string name="text_button_info_page_edit_1">By moving one row from right to left, two buttons can be activated.</string>
-    <string name="text_button_info_page_edit_2">Pressing on the \'pen\'</string>
-    <string name="text_button_info_page_edit_3">you can change the timer name.</string>
-    <string name="text_button_info_page_edit_4">Pressing on the \'trash can\'</string>
-    <string name="text_button_info_page_edit_5">you can delete the timer.</string>
     <string name="button_next_info_page_edit">Next</string>
     <string name="back">Back</string>
     <string name="listTimerName">Timer list saved</string>
