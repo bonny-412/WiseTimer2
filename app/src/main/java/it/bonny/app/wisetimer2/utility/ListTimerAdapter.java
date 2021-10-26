@@ -30,6 +30,7 @@ public class ListTimerAdapter extends ArrayAdapter<TimerBean> {
     private final SettingBean settingBean;
     private int selectedPosition = -1;
     private final Util util;
+    private final WiseToast wiseToast = new WiseToast();
 
     public ListTimerAdapter(List<TimerBean> timerBeans, SettingBean settingBean, Activity activity) {
         super(activity, R.layout.row_list_timer, timerBeans);
@@ -131,13 +132,13 @@ public class ListTimerAdapter extends ArrayAdapter<TimerBean> {
             boolean resultDelete = managerDB.deleteById(id);
             managerDB.close();
             if(resultDelete){
-                WiseToast.success(getContext(), getContext().getString(R.string.alert_delete_list_timer_message_yes), Toast.LENGTH_SHORT).show();
+                wiseToast.success(getContext(), getContext().getString(R.string.alert_delete_list_timer_message_yes), Toast.LENGTH_SHORT).show();
                 timerBeans.remove(position);
                 notifyDataSetChanged();
                 if(dialog != null)
                     dialog.dismiss();
             }else {
-                WiseToast.error(getContext(), getContext().getString(R.string.alert_delete_list_timer_message_error), Toast.LENGTH_SHORT).show();
+                wiseToast.error(getContext(), getContext().getString(R.string.alert_delete_list_timer_message_error), Toast.LENGTH_SHORT).show();
             }
         });
         if(dialog != null)

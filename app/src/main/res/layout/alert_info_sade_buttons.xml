@@ -17,12 +17,14 @@
             android:layout_height="wrap_content"
             android:textSize="25sp"
             android:padding="5dp"
-            android:textColor="@color/colorBlue"
+            android:textColor="@color/newColorText"
+            android:textStyle="bold"
             android:text="@string/info_alert_sade_buttons_title" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorInfoVersion"
+                android:textColor="@color/newColorText"
+                android:textStyle="normal"
                 android:text="@string/button_sades_fn_work"
                 android:padding="5dp"
                 android:layout_marginEnd="15dp"
@@ -34,7 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/titlePage"
-        android:textColor="?android:attr/colorBackgroundFloating"
+        android:textColor="@color/newColorText"
+        android:textStyle="normal"
         android:layout_marginTop="10dp"
         android:text="@string/info_alert_sade_buttons_timer"
         />
@@ -51,7 +54,7 @@
             android:id="@+id/textShowAlertSadeButtons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/newColorElement"
             android:textSize="12sp"
             android:layout_alignBaseline="@+id/showAlertSadeButtons"
             android:text="@string/info_alert_sade_buttons_disable"
@@ -74,13 +77,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignBaseline="@id/buttonNext"
         android:contentDescription="@string/text_button_cancel"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/newColorText"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
         android:padding="10dp"
-        android:foreground="@drawable/border_btn_alert"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@color/newColorBgDark"
         />
 
     <Button
@@ -91,13 +93,12 @@
         android:layout_toStartOf="@+id/buttonCancel"
         android:text="@string/button_next_info_page_edit"
         android:contentDescription="@string/button_next_info_page_edit"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/newColorText"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:padding="10dp"
         android:layout_marginTop="15dp"
-        android:foreground="@drawable/border_btn_alert"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@color/newColorBgDark"
         />
 
 </RelativeLayout>

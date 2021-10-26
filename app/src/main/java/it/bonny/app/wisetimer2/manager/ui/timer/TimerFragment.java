@@ -66,6 +66,7 @@ public class TimerFragment extends Fragment {
     private CheckBox infoPreWorkCheckbox;
     private String timerName = "";
     private List<TimerBean> timerBeanList = null;
+    private final WiseToast wiseToast = new WiseToast();
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         try{
@@ -480,12 +481,12 @@ public class TimerFragment extends Fragment {
                     if(isOpen)
                         closeFloatList();
                     if(getContext() != null)
-                        WiseToast.warning(getContext(), getString(R.string.seconds_work_rest_0), Toast.LENGTH_SHORT).show();
+                        wiseToast.warning(getContext(), getString(R.string.seconds_work_rest_0), Toast.LENGTH_SHORT).show();
                 }
             });
             fabStart.setOnLongClickListener(v -> {
                 if(getContext() != null)
-                    WiseToast.info(getContext(), getString(R.string.play_timer_info), Toast.LENGTH_SHORT).show();
+                    wiseToast.info(getContext(), getString(R.string.play_timer_info), Toast.LENGTH_SHORT).show();
                 return true;
             });
 
@@ -508,24 +509,24 @@ public class TimerFragment extends Fragment {
 
             fabViewList.setOnLongClickListener(v -> {
                 if(getContext() != null)
-                    WiseToast.info(getContext(), getString(R.string.listTimer), Toast.LENGTH_SHORT).show();
+                    wiseToast.info(getContext(), getString(R.string.listTimer), Toast.LENGTH_SHORT).show();
                 return true;
             });
             fabViewSave.setOnLongClickListener(v -> {
                 if(getContext() != null)
-                    WiseToast.info(getContext(), getString(R.string.saveTimer), Toast.LENGTH_SHORT).show();
+                    wiseToast.info(getContext(), getString(R.string.saveTimer), Toast.LENGTH_SHORT).show();
                 return true;
             });
             textViewTimerUsedNameCustom.setOnClickListener(v -> {
                 if(getContext() != null)
-                    WiseToast.info(getContext(), getString(R.string.timerUsedName), Toast.LENGTH_SHORT).show();
+                    wiseToast.info(getContext(), getString(R.string.timerUsedName), Toast.LENGTH_SHORT).show();
             });
 
             fabViewSave.setOnClickListener(view -> {
                 if((util.isZeroEmpty(editTextRestSec.getText().toString()) && util.isZeroEmpty(editTextRestMin.getText().toString())) &&
                         (util.isZeroEmpty(editTextWorkSec.getText().toString()) && util.isZeroEmpty(editTextWorkMin.getText().toString()))){
                     if(getContext() != null)
-                        WiseToast.warning(getContext(), getString(R.string.seconds_work_rest_0), Toast.LENGTH_SHORT).show();
+                        wiseToast.warning(getContext(), getString(R.string.seconds_work_rest_0), Toast.LENGTH_SHORT).show();
                 }else {
                     createDialogSaveData();
                     if(isOpen)
@@ -696,16 +697,16 @@ public class TimerFragment extends Fragment {
                         managerDB.close();
                         if(getContext() != null){
                             if(insertOK != -1){
-                                WiseToast.success(getContext(), getString(R.string.alert_save_timer_field_ok), Toast.LENGTH_SHORT).show();
+                                wiseToast.success(getContext(), getString(R.string.alert_save_timer_field_ok), Toast.LENGTH_SHORT).show();
                                 timerBeanCurrent.setName(getString(R.string.timerUsedNameCustomized));
                             }else {
-                                WiseToast.error(getContext(), getString(R.string.alert_save_timer_field_ko), Toast.LENGTH_SHORT).show();
+                                wiseToast.error(getContext(), getString(R.string.alert_save_timer_field_ko), Toast.LENGTH_SHORT).show();
                                 timerBeanCurrent.setName(getString(R.string.timerUsedNameCustomized));
                             }
                         }
                     }else {
                         if(getContext() != null)
-                            WiseToast.error(getContext(), getString(R.string.seconds_work_rest_0), Toast.LENGTH_SHORT).show();
+                            wiseToast.error(getContext(), getString(R.string.seconds_work_rest_0), Toast.LENGTH_SHORT).show();
                     }
                     if(dialog != null)
                         dialog.dismiss();
@@ -969,7 +970,7 @@ public class TimerFragment extends Fragment {
                         notificationManagerCompat.cancel(0);
                     }
                     if(getContext() != null)
-                        WiseToast.success(getContext(), getString(R.string.end_timer), Toast.LENGTH_SHORT).show();
+                        wiseToast.success(getContext(), getString(R.string.end_timer), Toast.LENGTH_SHORT).show();
                 }
             });
 

@@ -28,11 +28,10 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
             android:layout_margin="@dimen/play_margin"
-            android:tint="?android:attr/iconTint"
-            app:backgroundTint="@color/colorBlue"
+            android:tint="@color/newColorBg"
+            app:backgroundTint="@color/newColorElement"
             android:contentDescription="@string/start"
             app:maxImageSize="35dp"
-            android:background="?android:attr/selectableItemBackground"
             app:srcCompat="@drawable/baseline_play_arrow_24" />
         <include layout="@layout/float_button_save"/>
     </RelativeLayout>

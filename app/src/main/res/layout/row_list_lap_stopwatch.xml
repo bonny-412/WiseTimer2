@@ -14,12 +14,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="@color/newColorText"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
             android:padding="2dp"
             android:textSize="20sp"
-            android:textColor="#4d4d4d"
+            android:textColor="@color/newColorText"
             />
         <ImageView
             android:id="@+id/resultLapIcon"
@@ -35,14 +35,15 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:textSize="15sp"
+            android:textColor="@color/newColorText"
             android:layout_below="@+id/layoutLap"
             />
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#4d4d4d"
+        android:textAppearance="@color/newColorText"
+        android:textColor="@color/newColorText"
         android:textStyle="bold"
         android:gravity="end"
         android:textSize="20sp"

@@ -34,7 +34,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="cursive"
             android:text="@string/app_name"
-            android:textColor="@color/colorBlue"
+            android:textColor="@color/newColorElement"
+            android:textStyle="bold"
             android:textSize="50sp" />
 
         <TextView
@@ -43,7 +44,7 @@
             android:layout_gravity="center"
             android:fontFamily="serif"
             android:text="@string/version"
-            android:textColor="@color/colorInfoVersion"
+            android:textColor="@color/newColorText"
             android:textSize="25sp" />
     </LinearLayout>
 
@@ -64,7 +65,7 @@
             android:clickable="true"
             android:fontFamily="sans-serif-light"
             android:text="@string/terms_service"
-            android:textColor="@color/colorLink"
+            android:textColor="@color/newColorText"
             android:textSize="25sp" />
         <TextView
             android:id="@+id/linkPrivacyPolice"
@@ -73,7 +74,7 @@
             android:fontFamily="sans-serif-light"
             android:text="@string/privacy_policy"
             android:background="@drawable/border_to_link"
-            android:textColor="@color/colorLink"
+            android:textColor="@color/newColorText"
             android:layout_marginTop="10dp"
             android:clickable="true"
             android:layout_gravity="start"

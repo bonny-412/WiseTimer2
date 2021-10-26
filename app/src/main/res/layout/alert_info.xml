@@ -11,7 +11,8 @@
             android:layout_height="wrap_content"
             android:textSize="25sp"
             android:padding="5dp"
-            android:textColor="@color/colorBlue"
+            android:textColor="@color/newColorText"
+            android:textStyle="bold"
             android:text="@string/title_info_page_edit" />
         <LinearLayout
             android:layout_width="wrap_content"
@@ -24,7 +25,8 @@
                 android:layout_height="wrap_content"
                 android:paddingTop="15dp"
                 android:text="@string/text_checkbox_info_page_edit"
-                android:textColor="?android:attr/colorBackgroundFloating"
+                android:textColor="@color/newColorText"
+                android:textStyle="normal"
                 />
         </LinearLayout>
         <Button
@@ -33,13 +35,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/lineCheckbox"
             android:text="@string/text_button_cancel"
-            android:textColor="@color/colorBlue"
+            android:textColor="@color/newColorText"
             android:contentDescription="@string/text_button_cancel"
             android:layout_alignParentEnd="true"
             android:layout_marginBottom="15dp"
             android:padding="10dp"
             android:layout_marginTop="15dp"
-            android:foreground="@drawable/border_btn_alert"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/newColorBgDark"
             />
 </RelativeLayout>

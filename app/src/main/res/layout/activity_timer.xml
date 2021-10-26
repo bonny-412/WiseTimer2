@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/newColorBg"
     tools:context=".manager.TimerActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -15,7 +16,7 @@
         android:contentDescription="@string/block_element"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@color/newColorElement"
         app:srcCompat="@drawable/lock_open" />
 
     <include layout="@layout/content_timer"/>
@@ -41,7 +42,7 @@
                 android:layout_height="wrap_content"
                 app:maxImageSize="35dp"
                 android:layout_margin="@dimen/play_margin"
-                android:background="?android:attr/selectableItemBackground"
+                android:background="@color/newColorBg"
                 android:contentDescription="@string/start_stop"
                 android:theme="@style/AppTheme.buttonTimerDark"
                 app:srcCompat="@drawable/baseline_pause_24" />
@@ -54,7 +55,7 @@
                 app:maxImageSize="35dp"
                 android:layout_marginStart="80dp"
                 android:layout_marginTop="16dp"
-                android:background="?android:attr/selectableItemBackground"
+                android:background="@color/newColorBg"
                 android:layout_marginEnd="16dp"
                 android:contentDescription="@string/end"
                 app:srcCompat="@drawable/baseline_stop_24" />

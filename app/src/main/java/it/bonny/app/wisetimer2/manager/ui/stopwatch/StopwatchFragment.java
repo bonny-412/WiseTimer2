@@ -52,8 +52,8 @@ import it.bonny.app.wisetimer2.notification.NotificationReceiver;
 import it.bonny.app.wisetimer2.utility.CustomAdapterLapStopwatch;
 import it.bonny.app.wisetimer2.utility.MyBounceInterpolator;
 import it.bonny.app.wisetimer2.utility.Util;
-import it.bonny.app.wisetimer2.wisetoast.WiseToast;
 import it.bonny.app.wisetimer2.R;
+import it.bonny.app.wisetimer2.wisetoast.WiseToast;
 
 public class StopwatchFragment extends Fragment {
     private View root;
@@ -77,6 +77,7 @@ public class StopwatchFragment extends Fragment {
     private FragmentActivity fragmentActivity;
     private NotificationManagerCompat notificationManagerCompat;
     private ProgressBar progressBar_stopwatch;
+    private final WiseToast wiseToast = new WiseToast();
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         try{
@@ -147,34 +148,35 @@ public class StopwatchFragment extends Fragment {
                 }
             });
             lockDisplay.setOnLongClickListener(v -> {
-                if(getContext() != null)
-                    WiseToast.info(getContext(), getString(R.string.disable_screen), Toast.LENGTH_SHORT).show();
+                if(getContext() != null) {
+                    wiseToast.info(getContext(), getString(R.string.disable_screen), Toast.LENGTH_SHORT).show();
+                }
                 return true;
             });
             fabLap.setOnLongClickListener(v -> {
                 if(getContext() != null)
-                    WiseToast.info(getContext(), getString(R.string.lap_info), Toast.LENGTH_SHORT).show();
+                    wiseToast.info(getContext(), getString(R.string.lap_info), Toast.LENGTH_SHORT).show();
                 return true;
             });
             fabShare.setOnLongClickListener(v -> {
                 if(getContext() != null)
-                    WiseToast.info(getContext(), getString(R.string.share_laps), Toast.LENGTH_SHORT).show();
+                    wiseToast.info(getContext(), getString(R.string.share_laps), Toast.LENGTH_SHORT).show();
                 return true;
             });
             fabRestart.setOnLongClickListener(v -> {
                 if(getContext() != null)
-                    WiseToast.info(getContext(), getString(R.string.restart_info), Toast.LENGTH_SHORT).show();
+                    wiseToast.info(getContext(), getString(R.string.restart_info), Toast.LENGTH_SHORT).show();
                 return true;
             });
             fabPlayPause.setOnLongClickListener(v -> {
                 if(getContext() != null)
-                    WiseToast.info(getContext(), getString(R.string.play_pause_info), Toast.LENGTH_SHORT).show();
+                    wiseToast.info(getContext(), getString(R.string.play_pause_info), Toast.LENGTH_SHORT).show();
                 return true;
             });
             iconDetailsLap.setOnClickListener(v -> createDialogInfo());
             iconDetailsLap.setOnLongClickListener(v -> {
                 if(getContext() != null)
-                    WiseToast.info(getContext(), getString(R.string.show_details_lap), Toast.LENGTH_SHORT).show();
+                    wiseToast.info(getContext(), getString(R.string.show_details_lap), Toast.LENGTH_SHORT).show();
                 return true;
             });
         }catch (Exception e) {

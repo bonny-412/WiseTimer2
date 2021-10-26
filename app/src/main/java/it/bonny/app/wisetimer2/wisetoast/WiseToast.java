@@ -21,52 +21,53 @@ import it.bonny.app.wisetimer2.R;
 public class WiseToast {
     private static final Typeface LOADED_TOAST_TYPEFACE = Typeface.create("sans-serif-condensed", Typeface.NORMAL);
     private static final Typeface currentTypeface = LOADED_TOAST_TYPEFACE;
+    private Toast lastToast = null;
 
     public WiseToast() {}
 
     @CheckResult
-    public static Toast warning(@NonNull Context context, @NonNull CharSequence message, int duration) {
+    public Toast warning(@NonNull Context context, @NonNull CharSequence message, int duration) {
         return warning(context, message, duration, true);
     }
 
     @CheckResult
-    public static Toast warning(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
+    public Toast warning(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, WiseToastUtil.getDrawable(context, R.drawable.ic_error_outline_white_24dp_toast),
                 WiseToastUtil.getColor(context, R.color.warningColorToast), WiseToastUtil.getColor(context, R.color.defaultTextColorToast),
                 duration, withIcon, true);
     }
 
     @CheckResult
-    public static Toast info(@NonNull Context context, @NonNull CharSequence message, int duration) {
+    public Toast info(@NonNull Context context, @NonNull CharSequence message, int duration) {
         return info(context, message, duration, true);
     }
 
     @CheckResult
-    public static Toast info(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
+    public Toast info(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, WiseToastUtil.getDrawable(context, R.drawable.ic_info_outline_white_24dp_toast),
                 WiseToastUtil.getColor(context, R.color.infoColorToast), WiseToastUtil.getColor(context, R.color.defaultTextColorToast),
                 duration, withIcon, true);
     }
 
     @CheckResult
-    public static Toast success(@NonNull Context context, @NonNull CharSequence message, int duration) {
+    public Toast success(@NonNull Context context, @NonNull CharSequence message, int duration) {
         return success(context, message, duration, true);
     }
 
     @CheckResult
-    public static Toast success(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
+    public Toast success(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, WiseToastUtil.getDrawable(context, R.drawable.ic_check_white_24dp_toast),
                 WiseToastUtil.getColor(context, R.color.successColorToast), WiseToastUtil.getColor(context, R.color.defaultTextColorToast),
                 duration, withIcon, true);
     }
 
     @CheckResult
-    public static Toast error(@NonNull Context context, @NonNull CharSequence message, int duration) {
+    public Toast error(@NonNull Context context, @NonNull CharSequence message, int duration) {
         return error(context, message, duration, true);
     }
 
     @CheckResult
-    public static Toast error(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
+    public Toast error(@NonNull Context context, @NonNull CharSequence message, int duration, boolean withIcon) {
         return custom(context, message, WiseToastUtil.getDrawable(context, R.drawable.ic_clear_white_24dp_toast),
                 WiseToastUtil.getColor(context, R.color.errorColorToast), WiseToastUtil.getColor(context, R.color.defaultTextColorToast),
                 duration, withIcon, true);
@@ -74,7 +75,7 @@ public class WiseToast {
 
     @SuppressLint("ShowToast")
     @CheckResult
-    public static Toast custom(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
+    public Toast custom(@NonNull Context context, @NonNull CharSequence message, Drawable icon,
                                @ColorInt int tintColor, @ColorInt int textColor, int duration,
                                boolean withIcon, boolean shouldTint) {
         final Toast currentToast = Toast.makeText(context, "", duration);
@@ -104,6 +105,10 @@ public class WiseToast {
         toastTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
 
         currentToast.setView(toastLayout);
+
+        if(lastToast != null)
+            lastToast.cancel();
+        lastToast = currentToast;
 
         return currentToast;
     }

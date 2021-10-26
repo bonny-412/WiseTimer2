@@ -64,6 +64,7 @@ public class TimerActivity extends AppCompatActivity implements TextToSpeech.OnI
     private int tempoTotInSec = 0, numSeriesLeft, numRoundsLeft;
     private NotificationManagerCompat notificationManagerCompat;
     private FloatingActionButton lockDisplay;
+    private final WiseToast wiseToast = new WiseToast();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,16 +110,16 @@ public class TimerActivity extends AppCompatActivity implements TextToSpeech.OnI
             });
 
             lockDisplay.setOnLongClickListener(v -> {
-                WiseToast.info(context, getString(R.string.disable_screen), Toast.LENGTH_SHORT).show();
+                wiseToast.info(context, getString(R.string.disable_screen), Toast.LENGTH_SHORT).show();
                 return true;
             });
 
             fabPreWorkPausePlay.setOnLongClickListener(v -> {
-                WiseToast.info(context, getString(R.string.play_pause_timer_info), Toast.LENGTH_SHORT).show();
+                wiseToast.info(context, getString(R.string.play_pause_timer_info), Toast.LENGTH_SHORT).show();
                 return true;
             });
             fabPreWorkStop.setOnLongClickListener(v -> {
-                WiseToast.info(context, getString(R.string.restart_timer_info), Toast.LENGTH_SHORT).show();
+                wiseToast.info(context, getString(R.string.restart_timer_info), Toast.LENGTH_SHORT).show();
                 return true;
             });
         } catch (Exception e) {
@@ -188,7 +189,7 @@ public class TimerActivity extends AppCompatActivity implements TextToSpeech.OnI
             }
             @Override
             public void onError(String s) {
-                runOnUiThread(() -> WiseToast.error(context, getString(R.string.error_textToSpeech), Toast.LENGTH_SHORT).show());
+                runOnUiThread(() -> wiseToast.error(context, getString(R.string.error_textToSpeech), Toast.LENGTH_SHORT).show());
             }
         });
         Bundle params = new Bundle();
@@ -504,12 +505,12 @@ public class TimerActivity extends AppCompatActivity implements TextToSpeech.OnI
                 result = tts.setLanguage(Locale.UK);
             }
             if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED){
-                WiseToast.error(context, getString(R.string.error_textToSpeech), Toast.LENGTH_SHORT).show();
+                wiseToast.error(context, getString(R.string.error_textToSpeech), Toast.LENGTH_SHORT).show();
             }
             tts.setPitch(1.2f);
             tts.setSpeechRate(1.6f);
         } else
-            WiseToast.error(context, getString(R.string.error_textToSpeech), Toast.LENGTH_SHORT).show();
+            wiseToast.error(context, getString(R.string.error_textToSpeech), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -521,7 +522,7 @@ public class TimerActivity extends AppCompatActivity implements TextToSpeech.OnI
             util.exitAppByOnBackPressed(this);
         } else {
             if(context != null)
-                WiseToast.warning(context, getString(R.string.pressToExit), Toast.LENGTH_SHORT).show();
+                wiseToast.warning(context, getString(R.string.pressToExit), Toast.LENGTH_SHORT).show();
         }
         backPressedTime = System.currentTimeMillis();
     }

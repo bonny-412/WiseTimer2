@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private final int STOPWATCH = 1;
     private final int TIMER = 0;
     private BottomNavigationView navView;
+    private final WiseToast wiseToast = new WiseToast();
 
     public MainActivity() {
     }
@@ -75,13 +76,14 @@ public class MainActivity extends AppCompatActivity {
             ViewPagerAdapter adapter = new ViewPagerAdapter(fragmentManager, getLifecycle());
             viewPager.setAdapter(adapter);
             viewPager.registerOnPageChangeCallback(pageChangeCallback);
+            viewPager.setUserInputEnabled(false);
 
             navView.setOnItemSelectedListener(item -> {
                 int itemId = item.getItemId();
                 if(isRunningStopwatch){
                     idFragmentNow = R.id.navigation_stopwatch;
                     viewPager.setCurrentItem(STOPWATCH);
-                    WiseToast.warning(context, getString(R.string.stopwatch_running), Toast.LENGTH_SHORT).show();
+                    wiseToast.warning(context, getString(R.string.stopwatch_running), Toast.LENGTH_SHORT).show();
                 }else {
                     if(itemId == R.id.navigation_timer) {
                         if(idFragmentNow != R.id.navigation_timer){
@@ -133,14 +135,20 @@ public class MainActivity extends AppCompatActivity {
     ViewPager2.OnPageChangeCallback pageChangeCallback = new ViewPager2.OnPageChangeCallback() {
         @Override
         public void onPageSelected(int position) {
-            super.onPageSelected(position);
-            if (prevMenuItem != null)
-                prevMenuItem.setChecked(false);
-            else
-                navView.getMenu().getItem(STOPWATCH).setChecked(false);
-            navView.getMenu().getItem(position).setChecked(true);
-            prevMenuItem = navView.getMenu().getItem(position);
-            idFragmentNow = position;
+            if(isRunningStopwatch){
+                idFragmentNow = R.id.navigation_stopwatch;
+                viewPager.setCurrentItem(STOPWATCH);
+                wiseToast.warning(context, getString(R.string.stopwatch_running), Toast.LENGTH_SHORT).show();
+            }else {
+                super.onPageSelected(position);
+                if (prevMenuItem != null)
+                    prevMenuItem.setChecked(false);
+                else
+                    navView.getMenu().getItem(STOPWATCH).setChecked(false);
+                navView.getMenu().getItem(position).setChecked(true);
+                prevMenuItem = navView.getMenu().getItem(position);
+                idFragmentNow = position;
+            }
         }
     };
 
@@ -151,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
             util.exitAppByOnBackPressed(this);
         } else {
             if(context != null)
-                WiseToast.warning(context, getString(R.string.pressToExit), Toast.LENGTH_SHORT).show();
+                wiseToast.warning(context, getString(R.string.pressToExit), Toast.LENGTH_SHORT).show();
         }
         backPressedTime = System.currentTimeMillis();
     }

@@ -7,8 +7,7 @@
     android:layout_centerInParent="true"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:padding="28dp"
-    >
+    android:padding="28dp">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -34,7 +33,7 @@
             android:layout_gravity="center"
             android:textSize="25sp"
             android:fontFamily="@font/black_ops_one"
-            android:background="?android:attr/selectableItemBackground"
+            android:textColor="@color/newColorText"
             />
         <ImageView
             android:layout_width="48dp"
@@ -45,7 +44,6 @@
             android:layout_gravity="center"
             android:contentDescription="@string/info_timer"
             android:clickable="true"
-            android:background="?android:attr/selectableItemBackground"
             android:id="@+id/infoTimerBtn"/>
     </LinearLayout>
 
@@ -57,13 +55,13 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
         android:layout_marginTop="20dp"
-        android:background="@drawable/border_to_title"
         android:baselineAligned="false"
         android:clickable="false"
         android:contentDescription="@string/rounds"
         android:drawableEnd="@drawable/rounds_icon"
         android:fontFamily="@font/teko"
         android:text="@string/rounds"
+        android:textColor="@color/newColorElement"
         android:textSize="25sp" />
     <LinearLayout
         android:id="@+id/layButtonRounds"
@@ -84,7 +82,7 @@
             android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginEnd="10dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             android:drawableEnd="@drawable/baseline_remove_circle_outline_24" />
         <EditText
             android:id="@+id/editTextRounds"
@@ -96,8 +94,9 @@
             android:gravity="center"
             android:layout_marginTop="-5dp"
             android:imeOptions="actionDone"
-            android:textColor="@color/textColorBlack"
-            android:tint="@color/textColorBlack"
+            android:textColor="@color/newColorText"
+            android:tint="@color/newColorText"
+            android:textColorHint="@color/newColorText"
             android:hint="@string/numRounds"
             android:inputType="number"
             android:background="@android:color/transparent"
@@ -111,7 +110,7 @@
             android:layout_marginStart="10dp"
             android:layout_gravity="center"
             android:contentDescription="@string/addRounds"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             android:drawableEnd="@drawable/baseline_add_circle_outline_24" />
     </LinearLayout>
 
@@ -122,7 +121,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/layButtonRounds"
         android:layout_marginTop="20dp"
-        android:background="@drawable/border_to_title"
         android:baselineAligned="false"
         android:visibility="gone"
         android:clickable="false"
@@ -130,6 +128,7 @@
         android:text="@string/restRounds"
         android:contentDescription="@string/restRounds"
         android:fontFamily="@font/teko"
+        android:textColor="@color/newColorElement"
         android:textSize="25sp" />
     <LinearLayout
         android:id="@+id/layButtonRestRounds"
@@ -151,7 +150,7 @@
             android:layout_gravity="center"
             android:contentDescription="@string/removeRestRounds"
             android:layout_marginEnd="10dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             android:drawableEnd="@drawable/baseline_remove_circle_outline_24" />
         <EditText
             android:id="@+id/editTextRestRoundsMin"
@@ -163,8 +162,9 @@
             android:fontFamily="@font/black_ops_one"
             android:maxLength="2"
             android:imeOptions="actionDone"
-            android:textColor="@color/textColorBlack"
-            android:tint="@color/textColorBlack"
+            android:textColor="@color/newColorText"
+            android:tint="@color/newColorText"
+            android:textColorHint="@color/newColorText"
             android:hint="@string/second_start_rest_round"
             android:inputType="number"
             android:background="@android:color/transparent"
@@ -181,7 +181,7 @@
             android:gravity="center"
             android:layout_marginTop="-5dp"
             android:layout_marginEnd="10dp"
-            android:textColor="@color/textColorBlack"
+            android:textColor="@color/newColorText"
             android:textSize="25sp"
             android:fontFamily="@font/teko"
             android:contentDescription="@string/timeRestRounds"
@@ -196,8 +196,9 @@
             android:layout_gravity="center"
             android:layout_marginTop="-5dp"
             android:imeOptions="actionDone"
-            android:textColor="@color/textColorBlack"
-            android:tint="@color/textColorBlack"
+            android:textColor="@color/newColorText"
+            android:tint="@color/newColorText"
+            android:textColorHint="@color/newColorText"
             android:hint="@string/minute_start_rest_round"
             android:inputType="number"
             android:background="@android:color/transparent"
@@ -211,7 +212,7 @@
             android:contentDescription="@string/addRestRounds"
             android:layout_marginStart="10dp"
             android:layout_gravity="center"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/newColorElement"
             android:drawableEnd="@drawable/baseline_add_circle_outline_24" />
     </LinearLayout>
 
@@ -222,11 +223,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/layButtonRestRounds"
-        android:background="@drawable/border_to_title"
         android:baselineAligned="false"
         android:clickable="false"
         android:drawableEnd="@drawable/series_icon"
         android:text="@string/series"
+        android:textColor="@color/newColorElement"
         android:contentDescription="@string/series"
         android:fontFamily="@font/teko"
         android:textSize="25sp" />
@@ -249,7 +250,7 @@
             android:contentDescription="@string/removeSeries"
             android:layout_marginEnd="10dp"
             android:layout_gravity="center"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             android:drawableEnd="@drawable/baseline_remove_circle_outline_24" />
         <EditText
             android:id="@+id/editTextSerie"
@@ -261,8 +262,9 @@
             android:fontFamily="@font/black_ops_one"
             android:maxLength="2"
             android:imeOptions="actionDone"
-            android:textColor="@color/textColorBlack"
-            android:tint="@color/textColorBlack"
+            android:textColor="@color/newColorText"
+            android:tint="@color/newColorText"
+            android:textColorHint="@color/newColorText"
             android:hint="@string/numSeries"
             android:inputType="number"
             android:background="@android:color/transparent"
@@ -276,7 +278,7 @@
             android:contentDescription="@string/addSeries"
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             android:drawableEnd="@drawable/baseline_add_circle_outline_24" />
     </LinearLayout>
 
@@ -287,10 +289,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/layButtonSeries"
         android:layout_marginTop="22dp"
-        android:background="@drawable/border_to_title"
         android:baselineAligned="false"
         android:contentDescription="@string/work"
         android:drawableEnd="@drawable/work_icon"
+        android:textColor="@color/newColorElement"
         android:clickable="false"
         android:text="@string/work"
         android:fontFamily="@font/teko"
@@ -314,7 +316,7 @@
             android:layout_marginEnd="10dp"
             android:layout_gravity="center"
             android:contentDescription="@string/removeWork"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             android:drawableEnd="@drawable/baseline_remove_circle_outline_24" />
         <EditText
             android:id="@+id/editTextWorkMin"
@@ -326,8 +328,9 @@
             android:layout_marginTop="-5dp"
             android:gravity="center"
             android:imeOptions="actionDone"
-            android:textColor="@color/textColorBlack"
-            android:tint="@color/textColorBlack"
+            android:textColor="@color/newColorText"
+            android:tint="@color/newColorText"
+            android:textColorHint="@color/newColorText"
             android:hint="@string/second_start_work"
             android:inputType="number"
             android:background="@android:color/transparent"
@@ -344,7 +347,7 @@
             android:gravity="center"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:textColor="@color/textColorBlack"
+            android:textColor="@color/newColorText"
             android:textSize="25sp"
             android:contentDescription="@string/timeWork"
             android:text="@string/duePunti" />
@@ -359,8 +362,9 @@
             android:maxLength="2"
             android:hint="@string/minute_start_work"
             android:imeOptions="actionDone"
-            android:textColor="@color/textColorBlack"
-            android:tint="@color/textColorBlack"
+            android:textColor="@color/newColorText"
+            android:tint="@color/newColorText"
+            android:textColorHint="@color/newColorText"
             android:inputType="number"
             android:background="@android:color/transparent"
             android:textSize="26sp"
@@ -373,7 +377,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/addWork"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             android:drawableEnd="@drawable/baseline_add_circle_outline_24" />
     </LinearLayout>
 
@@ -384,9 +388,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/layButtonWork"
         android:layout_marginTop="20dp"
-        android:background="@drawable/border_to_title"
         android:baselineAligned="false"
         android:clickable="false"
+        android:textColor="@color/newColorElement"
         android:drawableEnd="@drawable/rest_icon"
         android:text="@string/rest"
         android:fontFamily="@font/teko"
@@ -411,7 +415,7 @@
             android:contentDescription="@string/removeRest"
             android:layout_gravity="center"
             android:layout_marginEnd="10dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             android:drawableEnd="@drawable/baseline_remove_circle_outline_24" />
         <EditText
             android:id="@+id/editTextRestMin"
@@ -423,8 +427,9 @@
             android:fontFamily="@font/black_ops_one"
             android:maxLength="2"
             android:imeOptions="actionDone"
-            android:textColor="@color/textColorBlack"
-            android:tint="@color/textColorBlack"
+            android:textColor="@color/newColorText"
+            android:tint="@color/newColorText"
+            android:textColorHint="@color/newColorText"
             android:hint="@string/second_start_rest"
             android:inputType="number"
             android:background="@android:color/transparent"
@@ -441,7 +446,7 @@
             android:gravity="center"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
-            android:textColor="@color/textColorBlack"
+            android:textColor="@color/newColorText"
             android:textSize="25sp"
             android:contentDescription="@string/timeRest"
             android:text="@string/duePunti" />
@@ -455,8 +460,9 @@
             android:fontFamily="@font/black_ops_one"
             android:maxLength="2"
             android:imeOptions="actionDone"
-            android:textColor="@color/textColorBlack"
-            android:tint="@color/textColorBlack"
+            android:textColor="@color/newColorText"
+            android:tint="@color/newColorText"
+            android:textColorHint="@color/newColorText"
             android:hint="@string/minute_start_rest"
             android:inputType="number"
             android:background="@android:color/transparent"
@@ -470,7 +476,7 @@
             android:layout_gravity="center"
             android:contentDescription="@string/addRest"
             android:layout_marginStart="10dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             android:drawableEnd="@drawable/baseline_add_circle_outline_24" />
     </LinearLayout>
 
@@ -486,7 +492,7 @@
             android:layout_height="48dp"
             android:contentDescription="@string/info"
             android:gravity="center"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             android:drawableEnd="@drawable/ic_info_black_24dp" />
         <TextView
             android:layout_width="wrap_content"
@@ -494,7 +500,8 @@
             android:id="@+id/textViewPreWorkInfo"
             android:layout_toEndOf="@+id/infoPreWorkButton"
             android:layout_alignBaseline="@+id/infoPreWorkButton"
-            android:text="@string/preWork" />
+            android:text="@string/preWork"
+            android:textColor="@color/newColorElement"/>
         <CheckBox
             android:id="@+id/infoPreWorkCheckbox"
             android:contentDescription="@string/yes_no"

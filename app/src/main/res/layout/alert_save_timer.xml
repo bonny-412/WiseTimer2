@@ -10,7 +10,8 @@
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:padding="5dp"
-        android:textColor="@color/colorBlue"
+        android:textStyle="bold"
+        android:textColor="@color/newColorText"
         />
 <EditText
     android:id="@+id/editTextDialogUserInput"
@@ -19,6 +20,9 @@
     android:maxLength="20"
     android:autofillHints="@string/alert_save_data_nome"
     android:hint="@string/alert_save_data_nome"
+    android:textColor="@color/newColorText"
+    android:textStyle="normal"
+    android:textColorHint="@color/newColorText"
     android:inputType="textCapWords"
     android:layout_marginTop="60dp"
     >
@@ -55,7 +59,7 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="2dp"
             android:layout_toEndOf="@id/iconAlertSaveTimer"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/newColorRed"
             />
     </RelativeLayout>
 
@@ -67,13 +71,12 @@
         android:text="@string/text_button_cancel"
         android:contentDescription="@string/text_button_cancel"
         android:layout_alignParentEnd="true"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/newColorText"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:padding="10dp"
         android:layout_marginTop="15dp"
-        android:foreground="@drawable/border_btn_alert"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@color/newColorBgDark"
         />
 
     <Button
@@ -84,13 +87,12 @@
         android:text="@string/text_button_save"
         android:contentDescription="@string/text_button_save"
         android:layout_toStartOf="@+id/buttonSaveDataCancel"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/newColorText"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
         android:padding="10dp"
-        android:foreground="@drawable/border_btn_alert"
-        android:background="?android:attr/selectableItemBackground"
+        android:background="@color/newColorBgDark"
         />
 
 

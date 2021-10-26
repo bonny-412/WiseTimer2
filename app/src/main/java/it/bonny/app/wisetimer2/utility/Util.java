@@ -245,17 +245,17 @@ public class Util {
         if(StateType.WORK.equals(bean.getType())){
             colorDrawable = R.drawable.drawable_circle_green;
             colorBorder = R.drawable.border_btn_work;
-            color = R.color.colorGreen;
+            color = R.color.newColorGreen;
             textType = bean.getContext().getString(R.string.work);
         }else if(StateType.PRE_WORK.equals(bean.getType())){
             colorDrawable = R.drawable.drawable_circle_yellow;
             colorBorder = R.drawable.border_btn_pre;
-            color = R.color.colorYellow;
+            color = R.color.newColorRed;
             textType = bean.getContext().getString(R.string.preWork);
         }else if(StateType.REST.equals(bean.getType()) || StateType.ROUND.equals(bean.getType())){
             colorDrawable = R.drawable.drawable_circle_blue;
             colorBorder = R.drawable.border_btn_rest;
-            color = R.color.colorBlue;
+            color = R.color.newColorBlue;
             if(StateType.ROUND.equals(bean.getType()))
                 textType = bean.getContext().getString(R.string.restRounds);
             else
@@ -278,7 +278,8 @@ public class Util {
     }
 
     public void getAlertDialogDeleteSettings(SettingBean settingBean, final Activity activity, final Context context){
-        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleDark);;
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.AlertDialogStyleDark);
+        WiseToast wiseToast = new WiseToast();
         View viewInfoDialog = View.inflate(context, R.layout.alert_reset_settings, null);
         builder.setCancelable(false);
         builder.setView(viewInfoDialog);
@@ -297,7 +298,7 @@ public class Util {
         });
         buttonSend.setOnClickListener(v -> {
             deleteSettingBean(activity);
-            WiseToast.success(context, context.getString(R.string.alert_delete_message_yes), Toast.LENGTH_SHORT).show();
+            wiseToast.success(context, context.getString(R.string.alert_delete_message_yes), Toast.LENGTH_SHORT).show();
         });
         if(dialog != null)
             dialog.show();
@@ -508,6 +509,7 @@ public class Util {
         byte[] data = Base64.decode("Ym9ubnkuc3ZpbHVwcG9AZ21haWwuY29t", Base64.DEFAULT);
         String[] TO = {new String(data, StandardCharsets.UTF_8)};
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        WiseToast wiseToast = new WiseToast();
 
         emailIntent.setType("message/rfc822");
         emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
@@ -518,7 +520,7 @@ public class Util {
             activity.startActivity(Intent.createChooser(emailIntent, activity.getString(R.string.send_email)));
             activity.finish();
         } catch (android.content.ActivityNotFoundException ex) {
-            WiseToast.error(context, activity.getString(R.string.send_email_error), Toast.LENGTH_SHORT).show();
+            wiseToast.error(context, activity.getString(R.string.send_email_error), Toast.LENGTH_SHORT).show();
             FirebaseCrashlytics.getInstance().recordException(ex);
         }
     }

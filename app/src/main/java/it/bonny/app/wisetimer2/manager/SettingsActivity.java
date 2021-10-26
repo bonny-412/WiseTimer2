@@ -39,6 +39,7 @@ public class SettingsActivity extends AppCompatActivity {
     static SettingBean settingBean;
     private long backPressedTime;
     private final Util util = new Util();
+    private final WiseToast wiseToast = new WiseToast();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,7 @@ public class SettingsActivity extends AppCompatActivity {
         private Preference delete, messageMe, commentApp, otherApp;
         private final Util util = new Util();
         private int backNext = 0;
+        private final WiseToast wiseToast = new WiseToast();
 
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -294,7 +296,7 @@ public class SettingsActivity extends AppCompatActivity {
                         util.sendEmail(emailText.getText().toString().trim(), "WiseTimer Info", getActivity(), getContext());
                 }else{
                     if(getContext() != null)
-                        WiseToast.warning(getContext(), getString(R.string.email_text_required), Toast.LENGTH_SHORT).show();
+                        wiseToast.warning(getContext(), getString(R.string.email_text_required), Toast.LENGTH_SHORT).show();
                 }
             });
             if(dialog != null)
@@ -308,7 +310,7 @@ public class SettingsActivity extends AppCompatActivity {
             util.exitAppByOnBackPressed(this);
         } else {
             if(getApplicationContext() != null)
-                WiseToast.warning(getApplicationContext(), getString(R.string.pressToExit), Toast.LENGTH_SHORT).show();
+                wiseToast.warning(getApplicationContext(), getString(R.string.pressToExit), Toast.LENGTH_SHORT).show();
         }
         backPressedTime = System.currentTimeMillis();
     }

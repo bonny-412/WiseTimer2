@@ -16,6 +16,7 @@
     <color name="newColorBlue">#B1D8FF</color>
     <color name="newColorRed">#F1AA9B</color>
     <color name="newColorYellow">#E7CF91</color>
+    <color name="newColorGreen">#BEED8F</color>
     <color name="newColorText">#C8C5B4</color>
 
     <!--Color Toast-->

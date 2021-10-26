@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:theme="@style/AppTheme.buttonTimerDark"
             app:maxImageSize="35dp"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/newColorElement"
             android:contentDescription="@string/block_element"
             android:layout_marginStart="10dp"
             android:visibility="gone"
@@ -44,7 +44,8 @@
             android:text="@string/start_time_stopwatch"
             android:contentDescription="@string/numStopwatch"
             android:fontFamily="@font/black_ops_one"
-            android:textColor="@color/colorBlue"
+            android:textColor="@color/newColorText"
+            android:textStyle="bold"
             android:textSize="30sp" />
         <TextView
             android:id="@+id/stringCountTimeLap"
@@ -56,7 +57,8 @@
             android:gravity="center"
             android:contentDescription="@string/numStopwatchLap"
             android:text="@string/start_time_stopwatch"
-            android:textColor="@color/colorBlue"
+            android:textColor="@color/newColorText"
+            android:textStyle="normal"
             android:textSize="20sp" />
         <LinearLayout
             android:id="@+id/layoutLap"
@@ -71,7 +73,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/black_ops_one"
                 android:gravity="center"
-                android:textColor="@color/colorBlue"
+                android:textColor="@color/newColorText"
+                android:textStyle="bold"
                 android:text="@string/lap"
                 android:textSize="17sp" />
             <TextView
@@ -81,7 +84,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/black_ops_one"
                 android:gravity="center"
-                android:textColor="@color/colorBlue"
+                android:textColor="@color/newColorText"
+                android:textStyle="normal"
                 android:textSize="17sp" />
         </LinearLayout>
         <ImageView
@@ -93,7 +97,7 @@
             android:visibility="gone"
             android:contentDescription="@string/show_details_lap"
             android:src="@drawable/eye"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/transparent"
             />
     </RelativeLayout>
 
@@ -130,7 +134,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/border_btn_rest"
+                android:background="@drawable/border_btn_stopwatch"
                 android:orientation="horizontal"
                 android:id="@+id/borderBtn"
                 tools:ignore="UselessParent">
@@ -140,7 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:maxImageSize="35dp"
-                    android:background="?android:attr/selectableItemBackground"
+                    android:background="@color/newColorElement"
                     android:layout_margin="16dp"
                     android:contentDescription="@string/start"
                     android:theme="@style/AppTheme.buttonTimerDark"
@@ -154,7 +158,7 @@
                     android:layout_marginStart="80dp"
                     android:contentDescription="@string/lap"
                     android:layout_marginTop="16dp"
-                    android:background="?android:attr/selectableItemBackground"
+                    android:background="@color/newColorElement"
                     android:layout_marginEnd="16dp"
                     app:srcCompat="@drawable/lap_24dp" />
                 <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -164,7 +168,7 @@
                     android:theme="@style/AppTheme.buttonTimerDark"
                     app:maxImageSize="35dp"
                     android:layout_marginStart="144dp"
-                    android:background="?android:attr/selectableItemBackground"
+                    android:background="@color/newColorElement"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
                     android:contentDescription="@string/shares"
@@ -176,7 +180,7 @@
                     android:theme="@style/AppTheme.buttonTimerDark"
                     app:maxImageSize="35dp"
                     android:contentDescription="@string/reset"
-                    android:background="?android:attr/selectableItemBackground"
+                    android:background="@color/newColorElement"
                     android:layout_marginStart="80dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"

@@ -13,7 +13,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:fontFamily="cursive"
-            android:textColor="@color/colorBlue"
+            android:textColor="@color/newColorElement"
             android:textSize="20sp"
             android:drawableEnd="@drawable/ic_icon_wisetimer"/>
 

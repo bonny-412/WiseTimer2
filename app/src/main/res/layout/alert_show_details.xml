@@ -17,7 +17,8 @@
             android:textSize="25sp"
             android:layout_span="3"
             android:padding="5dp"
-            android:textColor="@color/colorBlue"
+            android:textColor="@color/newColorText"
+            android:textStyle="bold"
             android:text="@string/details_lap_text" />
     </TableRow>
     <TableRow
@@ -41,7 +42,8 @@
             android:layout_marginEnd="10dp"
             android:text="@string/lap"
             android:contentDescription="@string/lap"
-            android:textColor="?android:attr/colorBackgroundFloating" />
+            android:textColor="@color/newColorText"
+            android:textStyle="normal" />
         <TextView
             android:id="@+id/numLap"
             android:layout_width="wrap_content"
@@ -50,7 +52,8 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:contentDescription="@string/lap_statistics"
-            android:textColor="?android:attr/colorBackgroundFloating" />
+            android:textColor="@color/newColorText"
+            android:textStyle="normal" />
     </TableRow>
     <TableRow
         android:layout_height="match_parent"
@@ -73,7 +76,8 @@
             android:layout_marginEnd="10dp"
             android:text="@string/best_lap"
             android:contentDescription="@string/best_lap"
-            android:textColor="?android:attr/colorBackgroundFloating" />
+            android:textColor="@color/newColorText"
+            android:textStyle="normal"/>
         <TextView
             android:id="@+id/bestLapTime"
             android:layout_width="wrap_content"
@@ -82,7 +86,8 @@
             android:layout_marginEnd="10dp"
             android:contentDescription="@string/bestLapNum"
             android:layout_column="2"
-            android:textColor="?android:attr/colorBackgroundFloating" />
+            android:textColor="@color/newColorText"
+            android:textStyle="normal" />
     </TableRow>
     <TableRow
         android:layout_height="match_parent"
@@ -105,7 +110,8 @@
             android:layout_marginEnd="10dp"
             android:text="@string/worse_lap"
             android:contentDescription="@string/worse_lap"
-            android:textColor="?android:attr/colorBackgroundFloating" />
+            android:textColor="@color/newColorText"
+            android:textStyle="normal"/>
         <TextView
             android:id="@+id/worseLapTime"
             android:layout_width="wrap_content"
@@ -114,7 +120,8 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:contentDescription="@string/worseLapNum"
-            android:textColor="?android:attr/colorBackgroundFloating" />
+            android:textColor="@color/newColorText"
+            android:textStyle="normal"/>
     </TableRow>
     <TableRow
         android:layout_height="match_parent"
@@ -137,7 +144,8 @@
             android:layout_marginEnd="10dp"
             android:text="@string/media_lap"
             android:contentDescription="@string/media_lap"
-            android:textColor="?android:attr/colorBackgroundFloating" />
+            android:textColor="@color/newColorText"
+            android:textStyle="normal"/>
         <TextView
             android:id="@+id/mediaLapTime"
             android:layout_width="wrap_content"
@@ -146,7 +154,8 @@
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:contentDescription="@string/averageNum"
-            android:textColor="?android:attr/colorBackgroundFloating" />
+            android:textColor="@color/newColorText"
+            android:textStyle="normal" />
     </TableRow>
 
     <TableRow
@@ -161,13 +170,12 @@
             android:layout_column="2"
             android:text="@string/text_button_cancel"
             android:contentDescription="@string/text_button_cancel"
-            android:textColor="@color/colorBlue"
+            android:textColor="@color/newColorText"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="15dp"
             android:layout_marginTop="15dp"
             android:padding="10dp"
-            android:foreground="@drawable/border_btn_alert"
-            android:background="?android:attr/selectableItemBackground"
+            android:background="@color/newColorBgDark"
             />
     </TableRow>
 

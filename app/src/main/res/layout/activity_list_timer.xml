@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:text="@string/list_empty"
+        android:textColor="@color/newColorText"
         android:textSize="20sp"/>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

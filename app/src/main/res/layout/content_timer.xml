@@ -30,7 +30,7 @@
                 android:gravity="center"
                 android:text="@string/roundsToTimerActivity"
                 android:id="@+id/strRoundsTimerAct"
-                android:textColor="@color/colorYellow"
+                android:textColor="@color/newColorRed"
                 android:textSize="20sp"
                 android:fontFamily="@font/black_ops_one"/>
             <TextView
@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:maxLength="2"
-                android:textColor="@color/colorYellow"
+                android:textColor="@color/newColorRed"
                 android:fontFamily="@font/black_ops_one"
                 android:textSize="25sp"
                 tools:ignore="InvalidId" />
@@ -53,7 +53,7 @@
         android:gravity="center"
         android:maxLength="5"
         android:fontFamily="@font/black_ops_one"
-        android:textColor="@color/colorYellow"
+        android:textColor="@color/newColorRed"
         android:textSize="75sp" />
 
     <TextView
@@ -64,7 +64,7 @@
         android:layout_centerInParent="true"
         android:gravity="center"
         android:text="@string/preWork"
-        android:textColor="@color/colorYellow"
+        android:textColor="@color/newColorRed"
         android:textSize="30sp" />
 
     <LinearLayout
@@ -78,7 +78,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/seriesToTimerActivity"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/newColorRed"
             android:id="@+id/strSeriesTimerAct"
             android:textSize="20sp"
             android:fontFamily="@font/black_ops_one"/>
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:maxLength="2"
-            android:textColor="@color/colorYellow"
+            android:textColor="@color/newColorRed"
             android:fontFamily="@font/black_ops_one"
             android:textSize="25sp"
             tools:ignore="InvalidId" />
