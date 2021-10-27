@@ -3,7 +3,7 @@
     <string name="app_name">WiseTimer</string>
     <string name="logo_ab">Bonaiuti Andrea Logo</string>
     <string name="app_name_icon">WiseTimer icon</string>
-    <string name="version">Version 1.1.2</string>
+    <string name="version">Version 1.0.3</string>
 
     <!-- *** TIMER *** -->
     <string name="series">Sets</string>
@@ -109,6 +109,7 @@
     <string name="voice_title">Voice</string>
     <string name="vibration_title">Vibration</string>
     <string name="languages_title">Languages</string>
+    <string name="timer_stopwatch_title">Timer/Stopwatch</string>
     <string name="display_on_title">Display always active</string>
     <string name="side_buttons_title">Use side buttons</string>
     <string name="comment_app">Comment on the application</string>
@@ -119,6 +120,7 @@
     <string name="active_analytics_subtitle">Send anonymous and aggregated data used to analyze the use of the app, so you can understand how to improve it</string>
     <!--Dialog -->
     <string name="languages_dialog_title">Choose a language</string>
+    <string name="timer_stopwatch_dialog_title">Choose what you want to start with</string>
     <!-- Preference Titles -->
     <string name="settings_header">General</string>
     <string name="delete_header">Delete</string>
@@ -129,6 +131,7 @@
     <string name="id_sound">sound</string>
     <string name="id_vibration">vibration</string>
     <string name="id_languages">languages</string>
+    <string name="id_timer_stopwatch">timer_stopwatch</string>
     <string name="id_delete">delete</string>
     <string name="id_display_on">displayOn</string>
     <string name="id_side_buttons">side_buttons</string>
@@ -141,6 +144,8 @@
     <string name="id_active_messaging">activeMessaging</string>
     <string name="languages_ita">Italian</string>
     <string name="languages_ing">English</string>
+    <string name="stopwatch_array_val">Stopwatch</string>
+    <string name="timer_array_val">Timer</string>
     <string name="info_alert_sade_buttons_title">Remember!</string>
     <string name="info_alert_sade_buttons_timer">For the timer:\n- The button to increase the volume will allow you to start/stop time. \n- The button to turn down the volume will allow you to stop the timer.\n</string>
     <string name="info_alert_sade_buttons_stopwatch">For the stopwatch: \n- 	The button to increase the volume will allow you to start/stop time. \n- The button to decrease the volume will allow you to save a lap, if you keep the button pressed you will restart the time.\n</string>

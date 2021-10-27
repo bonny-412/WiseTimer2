@@ -3,7 +3,7 @@
     <string name="app_name">WiseTimer</string>
     <string name="app_name_icon">Icona WiseTimer</string>
     <string name="logo_ab">Bonaiuti Andrea Logo</string>
-    <string name="version">Versione 1.1.2</string>
+    <string name="version">Versione 1.0.3</string>
 
     <!-- *** TIMER *** -->
     <string name="series">Serie</string>
@@ -109,6 +109,7 @@
     <string name="voice_title">Voce</string>
     <string name="vibration_title">Vibrazione</string>
     <string name="languages_title">Lingua</string>
+    <string name="timer_stopwatch_title">Timer/Cronometro</string>
     <string name="display_on_title">Display sempre attivo</string>
     <string name="side_buttons_title">Utilizzare pulsanti laterali</string>
     <string name="comment_app">Commenta l\' applicazione</string>
@@ -121,6 +122,7 @@
     <string name="active_analytics_subtitle">Invia dati anonimi e aggregati usati per analizzare l\' utilizzo dell\' app, così da poter capire come migliorarla</string>
     <!--Dialog -->
     <string name="languages_dialog_title">Scegli una lingua</string>
+    <string name="timer_stopwatch_dialog_title">Scegli con cosa vuoi iniziare</string>
     <!-- Preference Titles -->
     <string name="settings_header">Generali</string>
     <string name="feedback_header">Feedback</string>
@@ -131,6 +133,7 @@
     <string name="id_sound">sound</string>
     <string name="id_vibration">vibration</string>
     <string name="id_languages">languages</string>
+    <string name="id_timer_stopwatch">timer_stopwatch</string>
     <string name="id_delete">delete</string>
     <string name="id_display_on">displayOn</string>
     <string name="id_side_buttons">side_buttons</string>
@@ -153,6 +156,8 @@
     <string name="message_me_text">Vi prego di contattarmi per eventuali problemi, bug o richiesti generali.\n Grazie.</string>
     <string name="languages_ita">Italiano</string>
     <string name="languages_ing">Inglese</string>
+    <string name="stopwatch_array_val">Cronometro</string>
+    <string name="timer_array_val">Timer</string>
 
     <!-- *** INFORMATION *** -->
     <string name="action_information">Informazioni</string>

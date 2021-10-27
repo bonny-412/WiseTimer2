@@ -1,7 +1,7 @@
 <resources>
 
     <style name="PopupMenuListView" parent="@style/Widget.AppCompat.ListView.DropDown">
-        <item name="android:divider">@color/textColorBlack</item>
+        <item name="android:divider">@color/newColorBgDark</item>
         <item name="android:dividerHeight">1dp</item>
     </style>
 
@@ -33,6 +33,7 @@
 
     <style name="AppTheme.buttonTimerDark" parent="buttonTimer">
         <item name="android:tint">?android:attr/windowBackground</item>
+        <item name="android:background">@color/newColorElement</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
@@ -43,7 +44,7 @@
     </style>
 
     <style name="AlertDialogStyleDark" parent="Theme.AppCompat.Dialog">
-        <item name="android:textColorPrimary">@color/textColorWhite</item>
+        <item name="android:textColorPrimary">@color/newColorBg</item>
     </style>
     <!--_____________________________________________________________________________________________-->
 

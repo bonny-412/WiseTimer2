@@ -83,7 +83,7 @@ public class SettingsActivity extends AppCompatActivity {
     public static class SettingsFragment extends PreferenceFragmentCompat {
         private SwitchPreference activeCrash, activeAnalytics;
         private CheckBoxPreference sound, vibration, displayOn, sideButtons, voice;
-        private ListPreference languages;
+        private ListPreference languages, timerStopwatch;
         private Preference delete, messageMe, commentApp, otherApp;
         private final Util util = new Util();
         private int backNext = 0;
@@ -205,6 +205,19 @@ public class SettingsActivity extends AppCompatActivity {
                     }
                     return false;
                 });
+
+                timerStopwatch.setOnPreferenceClickListener(preference -> false);
+                timerStopwatch.setOnPreferenceChangeListener((preference, newValue) -> {
+                    String val = (String) newValue;
+                    settingBean.setTimerStopwatch(val);
+                    timerStopwatch.setValue(val);
+                    if(getActivity() != null){
+                        util.saveSettingBean(settingBean, getActivity());
+                        getActivity().recreate();
+                    }
+                    return false;
+                });
+
             }catch (Exception e){
                 util.errorReport(getActivity(), e.toString(), settingBean, getContext());
                 FirebaseCrashlytics.getInstance().recordException(e);
@@ -216,6 +229,7 @@ public class SettingsActivity extends AppCompatActivity {
             sound = getPreferenceManager().findPreference(getString(R.string.id_sound));
             vibration = getPreferenceManager().findPreference(getString(R.string.id_vibration));
             languages = getPreferenceManager().findPreference(getString(R.string.id_languages));
+            timerStopwatch = getPreferenceManager().findPreference(getString(R.string.id_timer_stopwatch));
             delete = getPreferenceManager().findPreference(getString(R.string.id_delete));
             messageMe = getPreferenceManager().findPreference(getString(R.string.id_message_me));
             commentApp = getPreferenceManager().findPreference(getString(R.string.id_comment_app));
@@ -228,6 +242,7 @@ public class SettingsActivity extends AppCompatActivity {
             sound.setChecked(settingBean.isSound());
             vibration.setChecked(settingBean.isVibration());
             languages.setValue(settingBean.getLanguages());
+            timerStopwatch.setValue(settingBean.getTimerStopwatch());
             displayOn.setChecked(settingBean.isDisplayOn());
             sideButtons.setChecked(settingBean.isSideButtons());
             activeCrash.setChecked(settingBean.isActiveCrash());

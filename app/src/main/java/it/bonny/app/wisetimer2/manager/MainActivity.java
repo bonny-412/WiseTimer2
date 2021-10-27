@@ -77,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
             viewPager.setAdapter(adapter);
             viewPager.registerOnPageChangeCallback(pageChangeCallback);
             viewPager.setUserInputEnabled(false);
+            if("0".equals(settingBean.getTimerStopwatch())) {
+                idFragmentNow = R.id.navigation_timer;
+                viewPager.setCurrentItem(TIMER);
+            }else {
+                idFragmentNow = R.id.navigation_stopwatch;
+                viewPager.setCurrentItem(STOPWATCH);
+            }
 
             navView.setOnItemSelectedListener(item -> {
                 int itemId = item.getItemId();

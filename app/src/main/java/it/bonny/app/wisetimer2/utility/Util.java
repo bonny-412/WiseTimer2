@@ -333,6 +333,7 @@ public class Util {
         editor.putBoolean(activity.getString(R.string.id_sound), settingBean.isSound());
         editor.putBoolean(activity.getString(R.string.id_vibration), settingBean.isVibration());
         editor.putString(activity.getString(R.string.id_languages), settingBean.getLanguages());
+        editor.putString(activity.getString(R.string.id_timer_stopwatch), settingBean.getTimerStopwatch());
         editor.putBoolean(activity.getString(R.string.id_infoPreWork), settingBean.isInfoPreWork());
         editor.putBoolean(activity.getString(R.string.id_display_on), settingBean.isDisplayOn());
         editor.putBoolean(activity.getString(R.string.id_side_buttons), settingBean.isSideButtons());
@@ -349,6 +350,7 @@ public class Util {
         editor.remove(activity.getString(R.string.id_sound));
         editor.remove(activity.getString(R.string.id_vibration));
         editor.remove(activity.getString(R.string.id_languages));
+        editor.remove(activity.getString(R.string.id_timer_stopwatch));
         editor.remove(activity.getString(R.string.id_infoPreWork));
         editor.remove(activity.getString(R.string.id_display_on));
         editor.remove(activity.getString(R.string.id_side_buttons));
@@ -403,6 +405,7 @@ public class Util {
         settingBean.setSound(sharedPreferences.getBoolean(activity.getString(R.string.id_sound), false));
         settingBean.setVibration(sharedPreferences.getBoolean(activity.getString(R.string.id_vibration), false));
         settingBean.setLanguages(sharedPreferences.getString(activity.getString(R.string.id_languages), findLanguageDevice(activity.getApplicationContext())));
+        settingBean.setTimerStopwatch(sharedPreferences.getString(activity.getString(R.string.id_timer_stopwatch), "0"));
         settingBean.setInfoPreWork(sharedPreferences.getBoolean(activity.getString(R.string.id_infoPreWork), true));
         settingBean.setDisplayOn(sharedPreferences.getBoolean(activity.getString(R.string.id_display_on), false));
         settingBean.setSideButtons(sharedPreferences.getBoolean(activity.getString(R.string.id_side_buttons), false));

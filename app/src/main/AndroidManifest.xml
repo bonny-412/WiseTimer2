@@ -114,7 +114,7 @@
             android:resource="@drawable/ic_icon_wisetimer_notify" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/colorBlue" />
+            android:resource="@color/newColorElement" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
             android:value="@string/notification_channel_id" />

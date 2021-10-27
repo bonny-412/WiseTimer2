@@ -8,4 +8,13 @@
         <item>it</item>
         <item>en</item>
     </string-array>
+    <!-- Timer/Stopwatch -->
+    <string-array name="timer_stopwatch_text">
+        <item>@string/timer_array_val</item>
+        <item>@string/stopwatch_array_val</item>
+    </string-array>
+    <string-array name="timer_stopwatch_values">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
 </resources>

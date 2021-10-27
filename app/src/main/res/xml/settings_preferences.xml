@@ -22,16 +22,6 @@
                     android:icon="@drawable/vibration_24"
                     android:summaryOn="@string/on"
                     android:title="@string/vibration_title" />
-                <ListPreference
-                    android:defaultValue="it"
-                    android:dialogIcon="@drawable/language_24"
-                    android:icon="@drawable/language_24"
-                    android:dialogTitle="@string/languages_dialog_title"
-                    android:entries="@array/languages_text"
-                    android:entryValues="@array/languages_values"
-                    android:key="@string/id_languages"
-                    android:summary="%s"
-                    android:title="@string/languages_title" />
                 <CheckBoxPreference
                     android:defaultValue="false"
                     android:key="@string/id_display_on"
@@ -46,6 +36,26 @@
                     android:icon="@drawable/side_buttons"
                     android:summaryOn="@string/on"
                     android:title="@string/side_buttons_title" />
+                <ListPreference
+                    android:defaultValue="it"
+                    android:dialogIcon="@drawable/language_24"
+                    android:icon="@drawable/language_24"
+                    android:dialogTitle="@string/languages_dialog_title"
+                    android:entries="@array/languages_text"
+                    android:entryValues="@array/languages_values"
+                    android:key="@string/id_languages"
+                    android:summary="%s"
+                    android:title="@string/languages_title" />
+                <ListPreference
+                    android:defaultValue="0"
+                    android:dialogIcon="@drawable/language_24"
+                    android:icon="@drawable/language_24"
+                    android:dialogTitle="@string/timer_stopwatch_dialog_title"
+                    android:entries="@array/timer_stopwatch_text"
+                    android:entryValues="@array/timer_stopwatch_values"
+                    android:key="@string/id_timer_stopwatch"
+                    android:summary="%s"
+                    android:title="@string/timer_stopwatch_title" />
         </PreferenceCategory>
 
         <PreferenceCategory

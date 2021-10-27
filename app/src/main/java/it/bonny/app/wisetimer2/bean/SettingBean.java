@@ -9,6 +9,7 @@ public class SettingBean implements Serializable {
     private boolean voice;
     private boolean vibration;
     private String languages;
+    private String timerStopwatch;
     private boolean infoPreWork;
     private boolean displayOn;
     private boolean sideButtons;
@@ -102,10 +103,17 @@ public class SettingBean implements Serializable {
         return  result;
     }
 
+    public String getTimerStopwatch() {
+        return timerStopwatch;
+    }
+    public void setTimerStopwatch(String timerStopwatch) {
+        this.timerStopwatch = timerStopwatch;
+    }
+
     @NonNull
     public String toString(){
         return " voice: " + voice + " sound: " + sound + " languages: " + languages + " vibration: " + vibration +
                 " activeCrash: " + activeCrash + " activeAnalytics: " + activeAnalytics +
-                " activeMessaging: " + activeMessaging;
+                " activeMessaging: " + activeMessaging + " timerStopwatch: " + timerStopwatch;
     }
 }
