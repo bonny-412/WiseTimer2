@@ -41,6 +41,7 @@ public class InformationActivity extends AppCompatActivity {
             ActionBar actionBar = getSupportActionBar();
             if (actionBar != null) {
                 actionBar.setDisplayHomeAsUpEnabled(true);
+                util.colorActionBarTitle(this, this, actionBar);
             }
             linkTermsService.setOnClickListener(v -> {
                 final String url = "https://wisetimer.netlify.app/terms-conditions.html";

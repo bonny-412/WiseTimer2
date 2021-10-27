@@ -4,9 +4,11 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
@@ -20,6 +22,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.text.HtmlCompat;
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -28,6 +32,8 @@ import androidx.preference.SwitchPreference;
 
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
+
+import java.util.Locale;
 
 import it.bonny.app.wisetimer2.bean.SettingBean;
 import it.bonny.app.wisetimer2.utility.Util;
@@ -58,10 +64,10 @@ public class SettingsActivity extends AppCompatActivity {
             bundle.putSerializable("settingBean", settingBean);
             settingsFragment.setArguments(bundle);
             getSupportFragmentManager().beginTransaction().replace(R.id.settings, settingsFragment).commit();
-
             ActionBar actionBar = getSupportActionBar();
             if (actionBar != null) {
                 actionBar.setDisplayHomeAsUpEnabled(true);
+                util.colorActionBarTitle(this, this, actionBar);
             }
         } catch (Exception e){
             FirebaseCrashlytics.getInstance().recordException(e);

@@ -7,10 +7,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.text.Html;
 import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +20,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.core.content.ContextCompat;
+import androidx.core.text.HtmlCompat;
 
 import com.google.firebase.crashlytics.FirebaseCrashlytics;
 
@@ -728,6 +732,13 @@ public class Util {
         else
             s += context.getString(R.string.interval_info_alert_timer);
         return s;
+    }
+
+    public void colorActionBarTitle(Activity activity, Context context, ActionBar actionBar) {
+        int orange = ContextCompat.getColor(context, R.color.newColorElement);
+        String htmlColor = String.format(Locale.US, "#%06X", (0xFFFFFF & Color.argb(0, Color.red(orange), Color.green(orange), Color.blue(orange))));
+        String titleColor = "<font color=\"" + htmlColor + "\">" + activity.getString(R.string.action_settings) + "</font>";
+        actionBar.setTitle(Html.fromHtml(titleColor, HtmlCompat.FROM_HTML_MODE_LEGACY));
     }
 
 }

@@ -17,14 +17,13 @@
         <item name="android:iconTint">?android:attr/windowBackground</item>
         <item name="android:dropDownListViewStyle">@style/PopupMenuListView</item>
         <item name="android:actionBarStyle">@style/ToolbarTheme</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_baseline_arrow_back_24</item>
 
     </style>
 
     <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <!-- Customize color of navigation drawer icon and back arrow -->
         <item name="colorControlNormal">@color/newColorElement</item>
-        <item name="android:titleTextStyle">@color/newColorElement</item>
-        <item name="android:subtitleTextStyle">@color/newColorElement</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="AppTheme">
